@@ -71,6 +71,9 @@ DTPL Kelompok 6
                                         {{ __('Login') }}
                                     </button>
 
+                                    <a href=""  class="btn btn-primary">
+                                        {{ __('Login Using Facebook') }}
+                                    </button>
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
