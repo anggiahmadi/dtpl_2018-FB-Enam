@@ -70,15 +70,13 @@ DTPL Kelompok 6
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Login') }}
                                     </button>
-
-                                    <a href=""  class="btn btn-primary">
-                                        {{ __('Login Using Facebook') }}
-                                    </button>
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif
+
+                                    <a href="{{ url('auth/google') }}" class="btn btn-primary">Register with google</a>
                                 </div>
                             </div>
                         </form>
