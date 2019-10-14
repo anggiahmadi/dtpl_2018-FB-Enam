@@ -18,7 +18,7 @@
 
 <body>
     <div class="super_container">
-        
+
         <!-- Header -->
 
         <header class="header">
@@ -45,7 +45,7 @@
                                     @endif
                                 @else
                                     <div class="user_box_login user_box_link"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></div>
-                                    
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                </div>		
+                </div>
             </div>
 
             <!-- Main Navigation -->
@@ -69,6 +69,17 @@
                                 <ul class="main_nav_list">
                                     <li class="main_nav_item"><a href="{{ url('') }}">homes</a></li>
                                     <li class="main_nav_item"><a href="{{ route('hello') }}">about us</a></li>
+                                    <li class="main_nav_item dropdown">
+                                            <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Destinasi
+                                            </a>
+
+                                            <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Kota</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Kuliner</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Alam</a>
+                                            </div>
+                                    </li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">offers</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">news</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">contact</a></li>
@@ -107,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                </div>	
+                </div>
             </nav>
 
         </header>
@@ -127,7 +138,7 @@
         </div>
 
         @yield('content')
-        
+
         <!-- Footer -->
 
         <footer class="footer">
@@ -156,7 +167,7 @@
                         <div class="footer_col">
                             <div class="footer_title">blog posts</div>
                             <div class="footer_content footer_blog">
-                                
+
                                 <!-- Footer blog item -->
                                 <div class="footer_blog_item clearfix">
                                     <div class="footer_blog_image"><img src="{{ asset('images/footer_blog_1.jpg') }}" alt="https://unsplash.com/@avidenov"></div>
@@ -165,7 +176,7 @@
                                         <div class="footer_blog_date">Nov 29, 2017</div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Footer blog item -->
                                 <div class="footer_blog_item clearfix">
                                     <div class="footer_blog_image"><img src="{{ asset('images/footer_blog_2.jpg') }}" alt="https://unsplash.com/@deannaritchie"></div>
