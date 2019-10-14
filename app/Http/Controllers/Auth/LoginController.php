@@ -59,12 +59,21 @@ class LoginController extends Controller
 
     public function findOrCreateUser($user,$provider)
     {
-        return User::create([
-            'name' => $user->name,
-            'email' => $user->email,
-            'provider' => strtoupper($provider),
-            'provider_id' => $user->id,
-        ]);
+        // Mengambil data user berdasarkan alamat E-mail.
+        $user_data = User::where('email', $user->email)->first();
+
+        if ($user_data) {
+            // Mengembalikan data user-nya jika di database sudah ada.
+            return $user_data;
+        } else {
+            // Menambah data user-nya jika di database belum ada.
+            return User::create([
+                'name' => $user->name,
+                'email' => $user->email,
+                'provider' => strtoupper($provider),
+                'provider_id' => $user->id,
+            ]);
+        }
     }
 
 
