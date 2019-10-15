@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('pages.home.index');
 });
+Route::get('/test', function () {
+    return view('pages.test.index');
+});
 
 Auth::routes();
 
