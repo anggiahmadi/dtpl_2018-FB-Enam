@@ -127,7 +127,8 @@ DTPL Kelompok 6
                         <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/departure.png') }}" alt="">flights</div>
                         <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/island.png') }}" alt="">trips</div>
                         <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/cruise.png') }}" alt="">cruises</div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/diving.png') }}" alt="">activities</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/diving.png') }}" alt="">packages
+                        </div>
                     </div>		
                 </div>
 

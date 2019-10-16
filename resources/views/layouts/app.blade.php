@@ -67,8 +67,8 @@
                             </div>
                             <div class="main_nav_container ml-auto">
                                 <ul class="main_nav_list">
-                                    <li class="main_nav_item"><a href="{{ url('') }}">homes</a></li>
-                                    <li class="main_nav_item"><a href="{{ route('hello') }}">about us</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('') }}">home</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('') }}">about us</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">offers</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">news</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">contact</a></li>
