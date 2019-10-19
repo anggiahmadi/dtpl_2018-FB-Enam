@@ -17,10 +17,12 @@ DTPL Kelompok 6
         <div class="row">
             <div class="col text-center">
                 <h2 class="section_title"></h2>
+
             </div>
         </div>
+
         <div class="row">
-            <div class="col">
+                <div class="col">
 
                 <!-- Wisata Kota Slider -->
 
@@ -31,7 +33,7 @@ DTPL Kelompok 6
                         <div class="owl-item">
                             <div class="test_item">
                                 <div class="test_image"><img src="{{ asset('images/kotajakarta.jpg') }}" alt="https://unsplash.com/@anniegray"></div>
-                                <div class="test_icon"><img src="{{ asset('images/backpack.png') }}" alt=""></div>
+
                             </div>
                         </div>
 
@@ -39,7 +41,7 @@ DTPL Kelompok 6
                         <div class="owl-item">
                             <div class="test_item">
                                 <div class="test_image"><img src="{{ asset('images/kotabandung.jpg') }}" alt="https://unsplash.com/@anniegray"></div>
-                                <div class="test_icon"><img src="{{ asset('images/backpack.png') }}" alt=""></div>
+
                             </div>
                         </div>
 
@@ -47,7 +49,7 @@ DTPL Kelompok 6
                            <div class="owl-item">
                                 <div class="test_item">
                                     <div class="test_image"><img src="{{ asset('images/kotajogja.jpg') }}" alt="https://unsplash.com/@anniegray"></div>
-                                    <div class="test_icon"><img src="{{ asset('images/backpack.png') }}" alt=""></div>
+                                    {{-- <div class="test_icon"><img src="{{ asset('images/backpack.png') }}" alt=""></div> --}}
                                 </div>
                             </div>
 
@@ -56,7 +58,6 @@ DTPL Kelompok 6
                         <div class="owl-item">
                                 <div class="test_item">
                                     <div class="test_image"><img src="{{ asset('images/kotamalang.jpg') }}" alt="https://unsplash.com/@anniegray"></div>
-                                    <div class="test_icon"><img src="{{ asset('images/backpack.png') }}" alt=""></div>
                                 </div>
                             </div>
 
