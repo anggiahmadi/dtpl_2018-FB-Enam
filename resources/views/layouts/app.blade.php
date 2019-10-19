@@ -4,7 +4,7 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Travelix Project">
+    <meta name="description" content="PiknikYuk! Project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/bootstrap4/bootstrap.min.css') }}">
     <link href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -68,12 +68,11 @@
                     <div class="row">
                         <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                             <div class="logo_container">
-                                <div class="logo"><a href="#"><img src="{{ asset('images/logo.png') }}" alt="">travelix</a></div>
+                                <div class="logo"><a href="#"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
                             </div>
                             <div class="main_nav_container ml-auto">
                                 <ul class="main_nav_list">
-                                    <li class="main_nav_item"><a href="{{ url('') }}">homes</a></li>
-                                    <li class="main_nav_item"><a href="{{ route('hello') }}">about us</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('') }}">home</a></li>
                                     <li class="main_nav_item dropdown">
                                             <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                               Destinasi
@@ -85,8 +84,8 @@
                                               <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Alam</a>
                                             </div>
                                     </li>
-                                    <li class="main_nav_item"><a href="{{ url('') }}">offers</a></li>
-                                    <li class="main_nav_item"><a href="{{ url('') }}">news</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('') }}">Penawaran</a></li>
+                                    <li class="main_nav_item"><a href="{{ route('hello') }}">about us</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">contact</a></li>
                                 </ul>
                             </div>
@@ -155,9 +154,9 @@
                         <div class="footer_col">
                             <div class="footer_content footer_about">
                                 <div class="logo_container footer_logo">
-                                    <div class="logo"><a href="#"><img src="{{ asset('images/logo.png') }}" alt="">travelix</a></div>
+                                    <div class="logo"><a href="#"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
                                 </div>
-                                <p class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula pretium.</p>
+                                <p class="footer_about_text">Website ini merupakan website agen travel yang dibangun dan dikelola oleh mahasiswa Fakultas Ilmu Komputer Universitas Indonesia.<br>Jakarta 2019</p>
                                 <ul class="footer_social_list">
                                     <li class="footer_social_item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
