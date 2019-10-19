@@ -8,17 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/bootstrap4/bootstrap.min.css') }}">
     <link href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('plugins/colorbox/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/offers_styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/offers_responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_responsive.css') }}">
     @yield('css')
 </head>
 
 <body>
     <div class="super_container">
-        
+
         <!-- Header -->
 
         <header class="header">
@@ -45,7 +50,7 @@
                                     @endif
                                 @else
                                     <div class="user_box_login user_box_link"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></div>
-                                    
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -53,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                </div>		
+                </div>
             </div>
 
             <!-- Main Navigation -->
@@ -67,8 +72,19 @@
                             </div>
                             <div class="main_nav_container ml-auto">
                                 <ul class="main_nav_list">
-                                    <li class="main_nav_item"><a href="{{ url('') }}">home</a></li>
-                                    <li class="main_nav_item"><a href="{{ url('') }}">about us</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('') }}">homes</a></li>
+                                    <li class="main_nav_item"><a href="{{ route('hello') }}">about us</a></li>
+                                    <li class="main_nav_item dropdown">
+                                            <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Destinasi
+                                            </a>
+
+                                            <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Kota</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Kuliner</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Alam</a>
+                                            </div>
+                                    </li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">offers</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">news</a></li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">contact</a></li>
@@ -107,7 +123,7 @@
                             </div>
                         </div>
                     </div>
-                </div>	
+                </div>
             </nav>
 
         </header>
@@ -127,7 +143,7 @@
         </div>
 
         @yield('content')
-        
+
         <!-- Footer -->
 
         <footer class="footer">
@@ -156,7 +172,7 @@
                         <div class="footer_col">
                             <div class="footer_title">blog posts</div>
                             <div class="footer_content footer_blog">
-                                
+
                                 <!-- Footer blog item -->
                                 <div class="footer_blog_item clearfix">
                                     <div class="footer_blog_image"><img src="{{ asset('images/footer_blog_1.jpg') }}" alt="https://unsplash.com/@avidenov"></div>
@@ -165,7 +181,7 @@
                                         <div class="footer_blog_date">Nov 29, 2017</div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Footer blog item -->
                                 <div class="footer_blog_item clearfix">
                                     <div class="footer_blog_image"><img src="{{ asset('images/footer_blog_2.jpg') }}" alt="https://unsplash.com/@deannaritchie"></div>
@@ -274,8 +290,15 @@
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('styles/bootstrap4/popper.js') }}"></script>
     <script src="{{ asset('styles/bootstrap4/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('plugins/Isotope/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
     <script src="{{ asset('plugins/easing/easing.js') }}"></script>
+    <script src="{{ asset('plugins/parallax-js-master/parallax.min.js') }}"></script>
+    <script src="{{ asset('plugins/colorbox/jquery.colorbox-min.js') }}"></script>
+    <script src="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+    <script src="{{ asset('js/single_listing_custom.js') }}"></script>
+    <script src="{{ asset('js/offers_custom.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
     @yield('js')
 </body>
