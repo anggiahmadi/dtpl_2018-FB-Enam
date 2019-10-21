@@ -15,7 +15,10 @@ class CreateTripPhotosTable extends Migration
     {
         Schema::create('trip_photos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('trip_id');
+            $table->string('photo')->nullable();
             $table->timestamps();
+            $table->foreign('trip_id')->references('id')->on('trips')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

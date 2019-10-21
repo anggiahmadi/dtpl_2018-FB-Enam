@@ -15,7 +15,10 @@ class CreateRentTypesTable extends Migration
     {
         Schema::create('rent_types', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('lodgement_id');
+            $table->string('name');
             $table->timestamps();
+            $table->foreign('lodgement_id')->references('id')->on('lodgements')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

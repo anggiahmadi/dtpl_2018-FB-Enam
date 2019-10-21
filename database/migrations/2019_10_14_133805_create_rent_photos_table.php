@@ -15,7 +15,10 @@ class CreateRentPhotosTable extends Migration
     {
         Schema::create('rent_photos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('rent_id');
+            $table->string('photo')->nullable();
             $table->timestamps();
+            $table->foreign('rent_id')->references('id')->on('rents')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
