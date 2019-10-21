@@ -122,14 +122,38 @@
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
-
+<!-- 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-block btn-primary">
                                         {{ __('Register') }}
                                     </button>
 
-                                    <a href="{{ url('auth/google') }}" class="btn btn-primary">Register with google</a>
+                                   
+                                </div>
+                            </div> -->
+
+                            
+                            <div class="form-group row">
+                                <div class="col-md-4">
+                                &nbsp;
+                                </div>
+
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-block btn-primary">
+                                        {{ __('Register') }}
+                                    </button>     
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <a href="{{ url('auth/google') }}" id="google-button" class="btn btn-block btn-danger"><i class="fa fa-google"></i>  Register With Google</a>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <a href="{{ url('auth/google') }}" id="facebook-button" class="btn btn-block btn-primary"><i class="fa fa-facebook"></i>  Register With Facebook</a>    
                                 </div>
                             </div>
                         </form>

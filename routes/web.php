@@ -23,6 +23,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/hello', 'HelloController@index')->name('hello');
 Route::get('/wisata', 'DestinationController@index')->name('wisata');
+Route::get('/wisatapantai', 'DestinationController@wisatapantai')->name('wisatapantai');
+Route::get('/wisatakuliner', 'DestinationController@wisatakuliner')->name('wisatakuliner');
+Route::get('/jakarta', 'DestinationController@jakarta')->name('jakarta');
 
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');

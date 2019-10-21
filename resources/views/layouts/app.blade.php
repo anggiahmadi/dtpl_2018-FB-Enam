@@ -79,9 +79,13 @@
                                             </a>
 
                                             <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Kota</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Kuliner</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Wisata Alam</a>
+                                              <a class="dropdown-item" href="{{ route('jakarta') }}">Jakarta</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Yogyakarta</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Jawa Timur</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Jawa Tengah</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Jawa Barat</a>
+                                              <a class="dropdown-item" href="{{ route('wisata') }}">Banten</a>
+                                              <a class="dropdown-item" href="{{ route('wisatapantai') }}">Wisata Pantai</a>
                                             </div>
                                     </li>
                                     <li class="main_nav_item"><a href="{{ url('') }}">Penawaran</a></li>

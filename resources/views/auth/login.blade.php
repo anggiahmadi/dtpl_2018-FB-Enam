@@ -65,7 +65,22 @@ DTPL Kelompok 6
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-0">
+
+                            <div class="form-group row">
+                                <div class="col-md-4">
+                                &nbsp;
+                                </div>
+
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-block btn-primary">
+                                        {{ __('Login') }}
+                                    </button>     
+                                </div>
+                            </div>
+
+                            
+
+                            <!-- <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Login') }}
@@ -74,9 +89,26 @@ DTPL Kelompok 6
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
-                                    @endif
-
-                                    <a href="{{ url('auth/google') }}" class="btn btn-primary">Register with google</a>
+                                    @endif                                 
+                                </div>                                  
+                            </div> -->
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <a href="{{ url('auth/google') }}" id="google-button" class="btn btn-block btn-danger"><i class="fa fa-google"></i>  Login With Google</a>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <a href="{{ url('auth/google') }}" id="facebook-button" class="btn btn-block btn-primary"><i class="fa fa-facebook"></i>  Login With Facebook</a>    
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4 text-center">
+                                    @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif  
                                 </div>
                             </div>
                         </form>
