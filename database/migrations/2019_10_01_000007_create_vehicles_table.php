@@ -19,11 +19,8 @@ class CreateVehiclesTable extends Migration
             $table->enum('type', ['bike', 'car']);
             $table->string('name');
             $table->string('default_picture')->nullable();
-            $table->text('desc')->nullable();
             $table->string('location');
-            $table->double('lat')->default(-6.194392);
-            $table->double('long')->default(106.847916);
-            $table->double('price')->default(0);
+            $table->text('desc')->nullable();
             $table->timestamps();
         });
     }

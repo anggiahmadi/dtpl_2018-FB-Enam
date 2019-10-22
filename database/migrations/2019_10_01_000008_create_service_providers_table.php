@@ -16,10 +16,9 @@ class CreateServiceProvidersTable extends Migration
         Schema::create('service_providers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('code')->unique();
+            $table->string('name');
             $table->string('default_picture')->nullable();
             $table->text('desc')->nullable();
-            $table->double('lat')->default(-6.194392);
-            $table->double('long')->default(106.847916);
             $table->double('price')->default(0);
             $table->timestamps();
         });
