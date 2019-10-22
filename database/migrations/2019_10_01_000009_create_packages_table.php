@@ -19,7 +19,7 @@ class CreatePackagesTable extends Migration
             $table->string('name');
             $table->string('default_picture')->nullable();
             $table->text('desc')->nullable();
-            $table->integer('length_of_term')->default(1);
+            $table->integer('length_of_term')->default(1); // in days
             $table->string('location');
             $table->double('lat')->default(-6.194392);
             $table->double('long')->default(106.847916);
