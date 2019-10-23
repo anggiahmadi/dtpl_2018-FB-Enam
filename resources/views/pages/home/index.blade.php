@@ -22,9 +22,7 @@ DTPL Kelompok 6
 
                 <div class="home_slider_content text-center">
                     <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-                        <h1>discover</h1>
-                        <h1>the world</h1>
-                        <div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+                        
                     </div>
                 </div>
             </div>
@@ -35,9 +33,7 @@ DTPL Kelompok 6
 
                 <div class="home_slider_content text-center">
                     <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-                        <h1>discover</h1>
-                        <h1>the world</h1>
-                        <div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+                        
                     </div>
                 </div>
             </div>
@@ -48,9 +44,7 @@ DTPL Kelompok 6
 
                 <div class="home_slider_content text-center">
                     <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-                        <h1>discover</h1>
-                        <h1>the world</h1>
-                        <div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+                        
                     </div>
                 </div>
             </div>
@@ -92,17 +86,6 @@ DTPL Kelompok 6
             17.046,15.554 "/>
             </svg>
         </div>
-
-        <!-- Home Slider Dots -->
-
-        <div class="home_slider_dots">
-            <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
-                <li class="home_slider_custom_dot active"><div></div>01.</li>
-                <li class="home_slider_custom_dot"><div></div>02.</li>
-                <li class="home_slider_custom_dot"><div></div>03.</li>
-            </ul>
-        </div>
-        
     </div>
 
 </div>
@@ -122,46 +105,43 @@ DTPL Kelompok 6
 
                 <div class="search_tabs_container">
                     <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/suitcase.png') }}" alt=""><span>hotels</span></div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/bus.png') }}" alt="">car rentals</div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/departure.png') }}" alt="">flights</div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/island.png') }}" alt="">trips</div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/cruise.png') }}" alt="">cruises</div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/diving.png') }}" alt="">packages
-                        </div>
+                        <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/cruise.png') }}" alt=""><span>Paket Wisata</span></div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/island.png') }}" alt="">Lokasi Wisata</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/bus.png') }}" alt="">Sewa Kendaraan</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/suitcase.png') }}" alt="">Hotel</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/diving.png') }}" alt="">Penyedia Jasa</div>
                     </div>		
                 </div>
 
                 <!-- Search Panel -->
 
                 <div class="search_panel active">
-                    <form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_item">
-                            <div>destination</div>
-                            <input type="text" class="destination search_input" required="required">
+                    <form method="GET" action="{{ url('package') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:80% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
                         </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
+                        <button class="button search_button">search<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+
+                <!-- Search Panel -->
+
+                <div class="search_panel">
+                    <form method="GET" action="{{ url('tourism_site') }}" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:64% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
                         </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>adults</div>
-                            <select name="adults" id="adults_1" class="dropdown_item_select search_input">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <div class="search_item">
-                            <div>children</div>
-                            <select name="children" id="children_1" class="dropdown_item_select search_input">
-                                <option>0</option>
-                                <option>02</option>
-                                <option>03</option>
+                        <div class="search_item" style="margin-top: 20px;">
+                            <div>Tipe Wisata</div>
+                            <select name="category_id" id="category_id" class="dropdown_item_select search_input" required="required">
+                                <option value="">Pilih Tipe Wisata</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <button class="button search_button">search<span></span><span></span><span></span></button>
@@ -171,33 +151,18 @@ DTPL Kelompok 6
                 <!-- Search Panel -->
 
                 <div class="search_panel">
-                    <form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_item">
-                            <div>destination</div>
-                            <input type="text" class="destination search_input" required="required">
+                    <form method="GET" action="{{ url('vehicle') }}" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:64% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
                         </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>adults</div>
-                            <select name="adults" id="adults_2" class="dropdown_item_select search_input">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <div class="search_item">
-                            <div>children</div>
-                            <select name="children" id="children_2" class="dropdown_item_select search_input">
-                                <option>0</option>
-                                <option>02</option>
-                                <option>03</option>
+                        <div class="search_item" style="margin-top: 20px;">
+                            <div>Tipe Kendaraan</div>
+                            <select name="type" id="type" class="dropdown_item_select search_input" required="required">
+                                <option value="" disabled>Pilih Tipe Kendaraan</option>
+                                <option value="bike">Motor</option>
+                                <option value="car">Mobil</option>
                             </select>
                         </div>
                         <button class="button search_button">search<span></span><span></span><span></span></button>
@@ -207,34 +172,11 @@ DTPL Kelompok 6
                 <!-- Search Panel -->
 
                 <div class="search_panel">
-                    <form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_item">
-                            <div>destination</div>
-                            <input type="text" class="destination search_input" required="required">
-                        </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>adults</div>
-                            <select name="adults" id="adults_3" class="dropdown_item_select search_input">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <div class="search_item">
-                            <div>children</div>
-                            <select name="children" id="children_3" class="dropdown_item_select search_input">
-                                <option>0</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
+                    <form method="GET" action="{{ url('lodgement') }}" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:80% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
                         </div>
                         <button class="button search_button">search<span></span><span></span><span></span></button>
                     </form>
@@ -243,105 +185,19 @@ DTPL Kelompok 6
                 <!-- Search Panel -->
 
                 <div class="search_panel">
-                    <form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_item">
-                            <div>destination</div>
-                            <input type="text" class="destination search_input" required="required">
+                    <form method="GET" action="{{ url('service_provider') }}" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:64% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
                         </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>adults</div>
-                            <select name="adults" id="adults_4" class="dropdown_item_select search_input">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <div class="search_item">
-                            <div>children</div>
-                            <select name="children" id="children_4" class="dropdown_item_select search_input">
-                                <option>0</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <button class="button search_button">search<span></span><span></span><span></span></button>
-                    </form>
-                </div>
-
-                <!-- Search Panel -->
-
-                <div class="search_panel">
-                    <form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_item">
-                            <div>destination</div>
-                            <input type="text" class="destination search_input" required="required">
-                        </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>adults</div>
-                            <select name="adults" id="adults_5" class="dropdown_item_select search_input">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <div class="search_item">
-                            <div>children</div>
-                            <select name="children" id="children_5" class="dropdown_item_select search_input">
-                                <option>0</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <button class="button search_button">search<span></span><span></span><span></span></button>
-                    </form>
-                </div>
-
-                <!-- Search Panel -->
-
-                <div class="search_panel">
-                    <form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_item">
-                            <div>destination</div>
-                            <input type="text" class="destination search_input" required="required">
-                        </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-                        </div>
-                        <div class="search_item">
-                            <div>adults</div>
-                            <select name="adults" id="adults_6" class="dropdown_item_select search_input">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
-                        </div>
-                        <div class="search_item">
-                            <div>children</div>
-                            <select name="children" id="children_6" class="dropdown_item_select search_input">
-                                <option>0</option>
-                                <option>02</option>
-                                <option>03</option>
+                        <div class="search_item" style="margin-top: 20px;">
+                            <div>Tipe Layanan</div>
+                            <select name="service_provider_type_id" id="service_provider_type_id" class="dropdown_item_select search_input" required="required">
+                                <option value="" disabled>Pilih Tipe Layanan</option>
+                                @foreach($service_provider_types as $service_provider_type)
+                                    <option value="{{ $service_provider_type->id }}">{{ $service_provider_type->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <button class="button search_button">search<span></span><span></span><span></span></button>

@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HelloController extends Controller
+class AboutController extends Controller
 {
-    //
     public function index()
     {
-        return view('pages.hello.index');
+        // Disini kodingan untuk landing page dari about
     }
 }

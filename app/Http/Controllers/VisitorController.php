@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\RentPhotos;
 use Illuminate\Http\Request;
 
-class RentPhotosController extends Controller
+class VisitorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +40,10 @@ class RentPhotosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\RentPhotos  $rentPhotos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RentPhotos $rentPhotos)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class RentPhotosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\RentPhotos  $rentPhotos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(RentPhotos $rentPhotos)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class RentPhotosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\RentPhotos  $rentPhotos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RentPhotos $rentPhotos)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class RentPhotosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\RentPhotos  $rentPhotos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RentPhotos $rentPhotos)
+    public function destroy($id)
     {
         //
     }

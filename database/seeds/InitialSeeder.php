@@ -43,6 +43,17 @@ class InitialSeeder extends Seeder
             'id' => 5, 'code' => '05', 'name' => 'Wisata Alam'
         ]);
 
+        /* DELETE DATA TO SERVICE PROVIDER TYPES TABLE */
+        DB::table('service_provider_types')->delete();
+
+        /* INSERT DATA TO SERVICE PROVIDER TYPES TABLE */
+        DB::table('service_provider_types')->insert([
+            'id' => 1, 'code' => '01', 'name' => 'Tour Guide'
+        ]);
+        DB::table('service_provider_types')->insert([
+            'id' => 2, 'code' => '02', 'name' => 'Fotografer'
+        ]);
+
         /* DELETE DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
         DB::table('lodgements')->delete();
         DB::table('lodgement_types')->delete();

@@ -44,14 +44,15 @@
                             </div>
                             <div class="user_box ml-auto">
                                 @guest
-                                    <div class="user_box_login user_box_link"><a href="{{ route('login') }}">{{ __('Login') }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('login') }}">{{ __('Masuk') }}</a></div>
                                     @if (Route::has('register'))
-                                        <div class="user_box_register user_box_link"><a href="{{ route('register') }}">{{ __('Register') }}</a></div>
+                                        <div class="user_box_register user_box_link"><a href="{{ url('register') }}">{{ __('Daftar') }}</a></div>
                                     @endif
                                 @else
-                                    <div class="user_box_login user_box_link"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
+                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ __('Profil') }}</a></div>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 @endguest
@@ -72,25 +73,22 @@
                             </div>
                             <div class="main_nav_container ml-auto">
                                 <ul class="main_nav_list">
-                                    <li class="main_nav_item"><a href="{{ url('') }}">home</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('') }}">beranda</a></li>
                                     <li class="main_nav_item dropdown">
-                                            <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                              Destinasi
-                                            </a>
+                                        <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Destinasi Wisata
+                                        </a>
 
-                                            <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
-                                              <a class="dropdown-item" href="{{ route('jakarta') }}">Jakarta</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Yogyakarta</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Jawa Timur</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Jawa Tengah</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Jawa Barat</a>
-                                              <a class="dropdown-item" href="{{ route('wisata') }}">Banten</a>
-                                              <a class="dropdown-item" href="{{ route('wisatapantai') }}">Wisata Pantai</a>
-                                            </div>
+                                        <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="{{ url('package') }}">Paket Wisata</a>
+                                            <a class="dropdown-item" href="{{ url('tourism_site') }}">Lokasi Wisata</a>
+                                            <a class="dropdown-item" href="{{ url('lodgement') }}">Hotel</a>
+                                            <a class="dropdown-item" href="{{ url('vehicle') }}">Sewa Kendaraan</a>
+                                            <a class="dropdown-item" href="{{ url('service_provider') }}">Penyedia Jasa</a>
+                                        </div>
                                     </li>
-                                    <li class="main_nav_item"><a href="{{ url('') }}">Penawaran</a></li>
-                                    <li class="main_nav_item"><a href="{{ route('hello') }}">about us</a></li>
-                                    <li class="main_nav_item"><a href="{{ url('') }}">contact</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('about') }}">Tentang Kami</a></li>
+                                    <li class="main_nav_item"><a href="{{ url('contact') }}">Hubungi Kami</a></li>
                                 </ul>
                             </div>
                             <div class="content_search ml-lg-0 ml-auto">
@@ -115,14 +113,6 @@
                                         </g>
                                     </g>
                                 </svg>
-                            </div>
-
-                            <form id="search_form" class="search_form bez_1">
-                                <input type="search" class="search_content_input bez_1">
-                            </form>
-
-                            <div class="hamburger">
-                                <i class="fa fa-bars trans_200"></i>
                             </div>
                         </div>
                     </div>

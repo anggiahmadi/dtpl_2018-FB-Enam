@@ -11,29 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home.index');
-});
-Route::get('/test', function () {
-    return view('pages.test.index');
-});
-
 Auth::routes();
 
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/hello', 'HelloController@index')->name('hello');
-Route::get('/wisata', 'DestinationController@index')->name('wisata');
-Route::get('/wisatapantai', 'DestinationController@wisatapantai')->name('wisatapantai');
-Route::get('/wisatakuliner', 'DestinationController@wisatakuliner')->name('wisatakuliner');
-Route::get('/jakarta', 'DestinationController@jakarta')->name('jakarta');
+Route::resource('package', 'PackageController');
+Route::resource('tourism_site', 'TourismSiteController');
+Route::resource('lodgement', 'LodgementController');
+Route::resource('vehicle', 'VehicleController');
+Route::resource('service_provider', 'ServiceProviderController');
+Route::resource('about', 'AboutController');
+Route::resource('contact', 'ContactController');
+Route::resource('visitor', 'VisitorController');
 
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-
-// Route::get('/', function () {
-//     return view('pages.hello.index');
-// });
-
-// Auth::routes();
-
-// Route::get('/hello', 'HelloController@index')->name('hello');
