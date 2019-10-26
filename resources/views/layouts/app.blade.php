@@ -68,7 +68,7 @@
                                     <li class="main_nav_item"><a href="{{ url('') }}">beranda</a></li>
                                     <li class="main_nav_item dropdown">
                                         <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Destinasi Wisata
+                                            Informasi Wisata
                                         </a>
 
                                         <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
