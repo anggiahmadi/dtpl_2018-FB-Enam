@@ -426,7 +426,7 @@ section
 }
 .main_nav_col
 {
-	height: 143px;
+	height: 80px;
 	-webkit-transition: all 400ms ease;
 	-moz-transition: all 400ms ease;
 	-ms-transition: all 400ms ease;
@@ -435,7 +435,7 @@ section
 }
 .header.scrolled .main_nav_col
 {
-	height: 100px;
+	height: 80px;
 }
 
 /*********************************
@@ -887,7 +887,7 @@ section
 .search_tabs_container
 {
 	position: relative;
-	top: -94px;
+	top: -50px;
 	width: 100%;
 }
 .search_tabs
@@ -902,7 +902,7 @@ section
 	color: #2d2c2c;
 	text-transform: uppercase;
 	text-align: center;
-	height: 94px;
+	height: 50px;
 	width: 50%;
 	flex-grow: 1;
 	background: #FFFFFF;
