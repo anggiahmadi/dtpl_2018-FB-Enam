@@ -70,7 +70,7 @@
                                         <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Informasi Wisata
                                         </a>
-                                        
+
                                         <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
                                             <a class="dropdown-item" href="{{ url('package') }}">Paket Wisata</a>
                                             <a class="dropdown-item" href="{{ url('tourism_site') }}">Lokasi Wisata</a>
@@ -130,79 +130,6 @@
         @yield('content')
 
         <!-- Footer -->
-
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Footer Column -->
-                    <div class="col-lg-4 footer_column">
-                        <div class="footer_col">
-                            <div class="footer_content footer_about">
-                                <div class="logo_container footer_logo">
-                                    <div class="logo"><a href="#"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
-                                </div>
-                                <p class="footer_about_text">Website ini merupakan website agen travel yang dibangun dan dikelola oleh mahasiswa Fakultas Ilmu Komputer Universitas Indonesia.<br>Jakarta 2019</p>
-                                <ul class="footer_social_list">
-                                    <li class="footer_social_item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                    <li class="footer_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Footer Column -->
-                    <div class="col-lg-4 footer_column">
-                        <div class="footer_col">
-                            <div class="footer_title">tags</div>
-                            <div class="footer_content footer_tags">
-                                <ul class="tags_list clearfix">
-                                    <li class="tag_item"><a href="#">piknik</a></li>
-                                    <li class="tag_item"><a href="#">liburan</a></li>
-                                    <li class="tag_item"><a href="#">jawa</a></li>
-                                    <li class="tag_item"><a href="#">video</a></li>
-                                    <li class="tag_item"><a href="#">indonesia</a></li>
-                                    <li class="tag_item"><a href="#">fotografi</a></li>
-                                    <li class="tag_item"><a href="#">petualangan</a></li>
-                                    <li class="tag_item"><a href="#">travel</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Footer Column -->
-                    <div class="col-lg-4 footer_column">
-                        <div class="footer_col">
-                            <div class="footer_title">Informasi Kontak</div>
-                            <div class="footer_content footer_contact">
-                                <ul class="contact_info_list">
-                                    <li class="contact_info_item d-flex flex-row">
-                                        <div><div class="contact_info_icon"><img src="{{ asset('images/placeholder.svg') }}" alt=""></div></div>
-                                        <div class="contact_info_text">Universitas Indonesia, Salemba, Jakarta</div>
-                                    </li>
-                                    <li class="contact_info_item d-flex flex-row">
-                                        <div><div class="contact_info_icon"><img src="{{ asset('images/phone-call.svg') }}" alt=""></div></div>
-                                        <div class="contact_info_text">085123123123</div>
-                                    </li>
-                                    <li class="contact_info_item d-flex flex-row">
-                                        <div><div class="contact_info_icon"><img src="{{ asset('images/message.svg') }}" alt=""></div></div>
-                                        <div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">admin@piknikyuk.com</a></div>
-                                    </li>
-                                    <li class="contact_info_item d-flex flex-row">
-                                        <div><div class="contact_info_icon"><img src="{{ asset('images/planet-earth.svg') }}" alt=""></div></div>
-                                        <div class="contact_info_text"><a href="https://colorlib.com">www.piknikyuk.com</a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-
-        <!-- Copyright -->
 
         <div class="copyright">
             <div class="container">

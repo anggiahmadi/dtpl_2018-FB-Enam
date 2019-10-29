@@ -8,6 +8,6 @@ class AboutController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari about
+        return view('pages.about');
     }
 }

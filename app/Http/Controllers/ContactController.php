@@ -8,6 +8,6 @@ class ContactController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari kontak
+        return view('pages.contact');
     }
 }

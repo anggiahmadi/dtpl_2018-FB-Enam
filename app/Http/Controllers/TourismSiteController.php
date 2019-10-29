@@ -8,7 +8,7 @@ class TourismSiteController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari lokasi wisata
+        return view('pages.info.tourism_site');
     }
 
     public function show($id)

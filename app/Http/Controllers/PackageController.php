@@ -8,7 +8,7 @@ class PackageController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari paket wisata
+        return view('pages.info.package');
     }
 
     public function show($id)
