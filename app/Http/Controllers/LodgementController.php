@@ -8,7 +8,7 @@ class LodgementController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari hotel
+        return view('pages.info.lodgement');
     }
 
     public function show($id)

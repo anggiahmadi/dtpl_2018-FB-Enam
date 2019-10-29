@@ -8,7 +8,7 @@ class VehicleController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari sewa kendaraan
+        return view('pages.info.vehicle');
     }
 
     public function show($id)
