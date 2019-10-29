@@ -363,7 +363,7 @@ DTPL Kelompok 6
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="intro_text text-center">
-                    <p>
+                    <p style="font-family:Comic Sans;">
                             Daerah Khusus Ibukota Jakarta (DKI Jakarta) adalah ibu kota negara dan kota terbesar di Indonesia. Jakarta merupakan satu-satunya kota di Indonesia yang memiliki status setingkat provinsi. Jakarta terletak di pesisir bagian barat laut Pulau Jawa. Dahulu pernah dikenal dengan beberapa nama di antaranya Sunda Kelapa, Jayakarta, dan Batavia.
                     </p>
                 </div>
@@ -1024,3 +1024,9 @@ DTPL Kelompok 6
 </div>
 
 @endsection
+
+<style>
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
