@@ -113,7 +113,7 @@ DTPL Kelompok 6
                 <!-- Search Panel -->
 
                 <div class="search_panel active">
-                    <form method="GET" action="{{ url('packages') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                    <form method="GET" action="{{ url('package') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
                         {{-- @csrf --}}
                         <div class="search_item" style="width:80% !important;margin-top: 20px;">
                             <div>Kota</div>

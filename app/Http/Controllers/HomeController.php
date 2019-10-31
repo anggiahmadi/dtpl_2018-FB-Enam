@@ -32,27 +32,6 @@ class HomeController extends Controller
         return view('pages.home.index', $data);
     }
 
-    // public function paketwisata()
-    // {
-    //     $data['categories'] = Category::get();
-    //     $data['service_provider_types'] = ServiceProviderType::get();
-    //     return view('pages.wisata.packages', $data);
-    // }
-
-    // nove
-    public function searchPaketWisata(Request $request)
-    {
-        $package = $request->get('location');
-        $result = Package::select('name')
-                           ->where('name', 'like', '%'.$package.'%')
-                           ->get();
-        // var_dump($package);
-        // die();
-        return view('pages.wisata.packages', compact('result', 'package'));
-        //return redirect()->route('packages', ['location' => $result]);
-
-    }
-
     public function searchLokasiWisata(Request $request)
     {
         $lokasiwisata = $request->get('location');
