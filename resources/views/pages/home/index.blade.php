@@ -87,7 +87,11 @@ DTPL Kelompok 6
             </svg>
         </div>
     </div>
+<<<<<<< HEAD
     <!-- tes -->
+=======
+
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
 </div>
 
 <!-- Search -->
@@ -113,7 +117,11 @@ DTPL Kelompok 6
                 <!-- Search Panel -->
 
                 <div class="search_panel active">
+<<<<<<< HEAD
                     <form method="GET" action="{{ url('packages') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+=======
+                    <form method="GET" action="{{ url('package') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
                         {{-- @csrf --}}
                         <div class="search_item" style="width:80% !important;margin-top: 20px;">
                             <div>Kota</div>
@@ -578,6 +586,7 @@ DTPL Kelompok 6
     </div>
 </div>
 
+<<<<<<< HEAD
 <!-- Testimonials -->
 
 <div class="testimonials">
@@ -750,6 +759,8 @@ DTPL Kelompok 6
     </div>
 </div>
 
+=======
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
 <div class="trending">
     <div class="container">
         <div class="row">

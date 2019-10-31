@@ -1232,6 +1232,30 @@ section
 	background: #fa9e1c;
 	border-radius: 14px;
 }
+<<<<<<< HEAD
+=======
+.intro_date2
+{
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: auto;
+	padding-left: 39px;
+	padding-right: 39px;
+	white-space: nowrap;
+	font-size: 30px;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 50px;
+	background: #fa9e1c;
+	border-radius: 15px;
+}
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
 .intro_button
 {
 	position: absolute;

@@ -32,6 +32,7 @@ class HomeController extends Controller
         return view('pages.home.index', $data);
     }
 
+<<<<<<< HEAD
     public function paketwisata()
     {
         $data['categories'] = Category::get();
@@ -53,6 +54,8 @@ class HomeController extends Controller
 
     }
 
+=======
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
     public function searchLokasiWisata(Request $request)
     {
         $lokasiwisata = $request->get('location');
@@ -66,9 +69,17 @@ class HomeController extends Controller
                 ['t_s_and_c.category_id', '=', $tipe])
             ->get();
 
+<<<<<<< HEAD
         // var_dump($result);
         // die();
 
         return view('pages.wisata.tourism_sites', compact('result', 'lokasiwisata'));
+=======
+        var_dump($result);
+        die();
+
+        return view('pages.wisata.tourism_sites', compact('result', 'lokasiwisata'));
+
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
     }
 }

@@ -116,7 +116,11 @@ DTPL Kelompok 6
 
                     <div class="search_panel active">
                         <form method="GET" action="{{ url('packages') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+<<<<<<< HEAD
                             <!-- @csrf -->
+=======
+                            {{-- @csrf --}}
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
                             <div class="search_item" style="width:80% !important;margin-top: 20px;">
                                 <div>Kota</div>
                                 <input type="text" name="location" class="destination search_input" required="required">
@@ -138,9 +142,15 @@ DTPL Kelompok 6
                                 <div>Tipe Wisata</div>
                                 <select name="category_id" id="category_id" class="dropdown_item_select search_input" required="required">
                                     <option value="">Pilih Tipe Wisata</option>
+<<<<<<< HEAD
                                     <!-- @foreach($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach -->
+=======
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
                                 </select>
                             </div>
                             <button type="submit" class="button search_button">search<span></span><span></span><span></span></button>
@@ -232,7 +242,11 @@ DTPL Kelompok 6
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="offers_content">
+<<<<<<< HEAD
                                         <div class="offers_price">{{ $data->price }}<span>per package</span></div>
+=======
+                                        <div class="offers_price">$70<span>per night</span></div>
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
                                         <div class="rating_r rating_r_4 offers_rating">
                                             <i></i>
                                             <i></i>
@@ -240,7 +254,11 @@ DTPL Kelompok 6
                                             <i></i>
                                             <i></i>
                                         </div>
+<<<<<<< HEAD
                                         <p class="offers_text">{{ $data->desc }}</p>
+=======
+                                        <p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
                                         <div class="offers_icons">
                                             <ul class="offers_icons_list">
                                                 <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>

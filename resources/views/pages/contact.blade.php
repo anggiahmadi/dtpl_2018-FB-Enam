@@ -5,6 +5,7 @@
     <div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/about_background.jpg') }}"></div>
     <div class="home_content">
         <div class="home_title">Hubungi Kami</div>
+<<<<<<< HEAD
         <!-- nove -->
         <div class="container">
             <p></p>
@@ -23,6 +24,8 @@
             </div>
         </div>
         <!-- end -->
+=======
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
     </div>
 </div>
 

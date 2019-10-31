@@ -17,10 +17,13 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 //nove
+<<<<<<< HEAD
 Route::get('/packages', 'HomeController@searchPaketWisata');
 Route::get('/tourism_site', 'HomeController@searchLokasiWisata');
 
 
+=======
+>>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
 Route::resource('package', 'PackageController');
 Route::resource('tourism_site', 'TourismSiteController');
 Route::resource('lodgement', 'LodgementController');
