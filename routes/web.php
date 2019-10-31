@@ -16,7 +16,6 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
-//nove
 Route::resource('package', 'PackageController');
 Route::resource('tourism_site', 'TourismSiteController');
 Route::resource('lodgement', 'LodgementController');

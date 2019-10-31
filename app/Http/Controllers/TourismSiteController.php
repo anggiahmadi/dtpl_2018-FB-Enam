@@ -9,9 +9,12 @@ class TourismSiteController extends Controller
 {
     public function index()
     {
-        $data['tourism_sites'] = TourismSite::get();
+        $location = \Request::get('location');
+        $category_id = \Request::get('category_id');
 
-        return view('pages.tourism_site.index', $data); 
+        $data['tourism_sites'] = TourismSite::get(); // mengambil semua data package
+
+        return view('pages.tourism_site.index', $data); // melempar data ke view
     }
 
     public function show($id)
