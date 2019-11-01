@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Package;
+use App\Models\Category;
+use App\Models\ServiceProviderType;
+
 class PackageController extends Controller
 {
     public function index()
     {
+        $data['categories'] = Category::get();
+        $data['service_provider_types'] = ServiceProviderType::get();
+        
         $location = \Request::get('location');
 
         if(!empty($location)){

@@ -8,6 +8,128 @@
     </div>
 </div>
 
+
+<!-- Search -->
+
+<div class="search">
+    <!-- Search Contents -->
+    <div class="container fill_height">
+        <div class="row fill_height">
+            <div class="col fill_height">
+
+                <!-- Search Tabs -->
+
+                <div class="search_tabs_container">
+                    <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/cruise.png') }}" alt=""><span>Paket Wisata</span></div>
+                        <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/island.png') }}" alt="">Lokasi Wisata</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/bus.png') }}" alt="">Sewa Kendaraan</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/suitcase.png') }}" alt="">Hotel</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ asset('images/diving.png') }}" alt="">Penyedia Jasa</div>
+                    </div>
+                </div>
+
+                <!-- Search Panel -->
+
+                <div class="search_panel">
+                    <form method="GET" action="{{ url('package') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        {{-- @csrf --}}
+                        <div class="search_item" style="width:80% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
+                        </div>
+                        <button type="submit" class="button search_button">search<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+
+                <!-- Search Panel -->
+
+                <div class="search_panel active">
+                    <form method="GET" action="{{ url('tourism_site') }}" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        {{-- @csrf --}}
+                        <div class="search_item" style="width:64% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required" value="{{ Request::get('location') }}">
+                        </div>
+                        <div class="search_item" style="margin-top: 20px;">
+                            <div>Tipe Wisata</div>
+                            <select name="category_id" id="category_id" class="dropdown_item_select search_input" required="required">
+                                <option value="">Pilih Tipe Wisata</option>
+                                @foreach($categories as $category)
+                                    @php
+                                        $selected = '';
+                                        if(Request::get('category_id') == $category->id){
+                                            $selected = 'selected';
+                                        }
+                                    @endphp
+                                    <option value="{{ $category->id }}" {{ $selected }}>{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <button type="submit" class="button search_button">search<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+
+                <!-- Search Panel -->
+
+                <div class="search_panel">
+                    <form method="GET" action="{{ url('vehicle') }}" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:64% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item" style="margin-top: 20px;">
+                            <div>Tipe Kendaraan</div>
+                            <select name="type" id="type" class="dropdown_item_select search_input" required="required">
+                                <option value="" disabled>Pilih Tipe Kendaraan</option>
+                                <option value="bike">Motor</option>
+                                <option value="car">Mobil</option>
+                            </select>
+                        </div>
+                        <button class="button search_button">search<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+
+                <!-- Search Panel -->
+
+                <div class="search_panel">
+                    <form method="GET" action="{{ url('lodgement') }}" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:80% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
+                        </div>
+                        <button class="button search_button">search<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+
+                <!-- Search Panel -->
+
+                <div class="search_panel">
+                    <form method="GET" action="{{ url('service_provider') }}" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+                        @csrf
+                        <div class="search_item" style="width:64% !important;margin-top: 20px;">
+                            <div>Kota</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item" style="margin-top: 20px;">
+                            <div>Tipe Layanan</div>
+                            <select name="service_provider_type_id" id="service_provider_type_id" class="dropdown_item_select search_input" required="required">
+                                <option value="" disabled>Pilih Tipe Layanan</option>
+                                @foreach($service_provider_types as $service_provider_type)
+                                    <option value="{{ $service_provider_type->id }}">{{ $service_provider_type->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <button class="button search_button">search<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Intro -->
 
 <div class="intro">
