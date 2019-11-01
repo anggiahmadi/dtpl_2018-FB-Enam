@@ -24,6 +24,7 @@ Route::resource('service_provider', 'ServiceProviderController');
 Route::resource('about', 'AboutController');
 Route::resource('contact', 'ContactController');
 Route::resource('visitor', 'VisitorController');
+Route::resource('order', 'OrderController');
 
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
