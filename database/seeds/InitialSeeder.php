@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\TourismSite;
 use Illuminate\Database\Seeder;
 
 class InitialSeeder extends Seeder
@@ -60,6 +61,43 @@ class InitialSeeder extends Seeder
         /* INSERT DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
         DB::table('lodgements')->insert([
             'id' => 1, 'code' => 'HTL-01', 'name' => 'Hotel Jakarta', 'location' => 'Jakarta', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+
+        DB::table('tourism_sites')->delete();
+
+        TourismSite::insert([
+            [
+                'code' => 'aaa',
+                'name' => 'Kepulauan Seribu',
+                'default_picture' => 'images/pariwisata/Kepulauan-Seribu.jpg',
+                'location' => 'Jakarta',
+                'desc' => 'Kepulauan Seribu',
+                'price' => 10000
+            ],
+            [
+                'code' => 'bbb',
+                'name' => 'Kepulauan Seribu',
+                'default_picture' => 'images/pariwisata/Kepulauan-Seribu.jpg',
+                'location' => 'Jakarta',
+                'desc' => 'Kepulauan Seribu',
+                'price' => 10000
+            ],
+            [
+                'code' => 'ccc',
+                'name' => 'Kepulauan Seribu',
+                'default_picture' => 'images/pariwisata/Kepulauan-Seribu.jpg',
+                'location' => 'Jakarta',
+                'desc' => 'Kepulauan Seribu',
+                'price' => 10000
+            ],
+            [
+                'code' => 'ddd',
+                'name' => 'Kepulauan Seribu',
+                'default_picture' => 'images/pariwisata/Kepulauan-Seribu.jpg',
+                'location' => 'Jakarta',
+                'desc' => 'Kepulauan Seribu',
+                'price' => 10000
+            ]
         ]);
     }
 }
