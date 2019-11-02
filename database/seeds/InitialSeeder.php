@@ -135,5 +135,64 @@ class InitialSeeder extends Seeder
         DB::table('packages')->insert([
             'id' => 3, 'code' => 'P003', 'name' => 'Paket Wisata Kepulauan Seribu', 'desc' => 'Kepulauan seribu merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jakarta', 'price' => '400000', 'default_picture' => 'uploads/wisata/01_jakarta/kota_tua.jpg'
         ]);
+
+        /* DELETE DATA TO VEHICLES TABLE */
+        DB::table('vehicles')->delete();
+
+        /* INSERT DATA TO VEHICLES TABLE */
+        DB::table('vehicles')->insert([
+            'id' => 1, 'code' => 'V001', 'type' => 'Mobil', 'name' => 'Toyota Avanza', 'default_picture' => 'uploads/wisata/07_vehicles/avanza.jpg', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Jakarta', 'price' => '3000000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 2, 'code' => 'V002', 'type' => 'Mobil', 'name' => 'Agya', 'default_picture' => 'uploads/wisata/07_vehicles/agya.jpg', 'desc' => 'Agya merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Jakarta', 'price' => '500000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 3, 'code' => 'V003', 'type' => 'Mobil', 'name' => 'Suzuki Ertiga', 'default_picture' => 'uploads/wisata/07_vehicles/ertiga.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jakarta', 'price' => '400000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 4, 'code' => 'V004', 'type' => 'Mobil', 'name' => 'Toyota Avanza', 'default_picture' => 'uploads/wisata/07_vehicles/avanza.jpg', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Bandung', 'price' => '3000000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 5, 'code' => 'V005', 'type' => 'Mobil', 'name' => 'Agya', 'default_picture' => 'uploads/wisata/07_vehicles/agya.jpg', 'desc' => 'Agya merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Bandung', 'price' => '500000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 6, 'code' => 'V006', 'type' => 'Mobil', 'name' => 'Suzuki Ertiga', 'default_picture' => 'uploads/wisata/07_vehicles/ertiga.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Bandung', 'price' => '400000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 7, 'code' => 'V007', 'type' => 'Mobil', 'name' => 'Toyota Avanza', 'default_picture' => 'uploads/wisata/07_vehicles/avanza.jpg', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Jogjakarta', 'price' => '3000000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 8, 'code' => 'V008', 'type' => 'Mobil', 'name' => 'Agya', 'default_picture' => 'uploads/wisata/07_vehicles/agya.jpg', 'desc' => 'Agya merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Jogjakarta', 'price' => '500000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 9, 'code' => 'V009', 'type' => 'Mobil', 'name' => 'Suzuki Ertiga', 'default_picture' => 'uploads/wisata/07_vehicles/ertiga.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jogjakarta', 'price' => '400000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 10, 'code' => 'V010', 'type' => 'Motor', 'name' => 'Honda Vario', 'default_picture' => 'uploads/wisata/07_vehicles/honda.jpg', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Jakarta', 'price' => '3000000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 11, 'code' => 'V011', 'type' => 'Motor', 'name' => 'Honda Supra X', 'default_picture' => 'uploads/wisata/07_vehicles/honda_suprax.jpg', 'desc' => 'Agya merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Jakarta', 'price' => '500000'
+        ]);
+        DB::table('vehicles')->insert([
+            'id' => 12, 'code' => 'V012', 'type' => 'Motor', 'name' => 'Scoopy', 'default_picture' => 'uploads/wisata/07_vehicles/scoopy.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jakarta', 'price' => '400000'
+        ]);
+        // DB::table('vehicles')->insert([
+        //     'id' => 13, 'code' => 'V013', 'type' => 'Motor', 'name' => 'Toyota Avanza', 'default_picture' => 'uploads/wisata/07_vehicles/avanza.jpg', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Bandung', 'price' => '3000000'
+        // ]);
+        // DB::table('vehicles')->insert([
+        //     'id' => 14, 'code' => 'V014', 'type' => 'Motor', 'name' => 'Agya', 'default_picture' => 'uploads/wisata/07_vehicles/agya.jpg', 'desc' => 'Agya merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Bandung', 'price' => '500000'
+        // ]);
+        // DB::table('vehicles')->insert([
+        //     'id' => 15, 'code' => 'V015', 'type' => 'Motor', 'name' => 'Suzuki Ertiga', 'default_picture' => 'uploads/wisata/07_vehicles/ertiga.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Bandung', 'price' => '400000'
+        // ]);
+        // DB::table('vehicles')->insert([
+        //     'id' => 16, 'code' => 'V016', 'type' => 'Motor', 'name' => 'Toyota Avanza', 'default_picture' => 'uploads/wisata/07_vehicles/avanza.jpg', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Jogjakarta', 'price' => '3000000'
+        // ]);
+        // DB::table('vehicles')->insert([
+        //     'id' => 17, 'code' => 'V017', 'type' => 'Motor', 'name' => 'Agya', 'default_picture' => 'uploads/wisata/07_vehicles/agya.jpg', 'desc' => 'Agya merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Jogjakarta', 'price' => '500000'
+        // ]);
+        // DB::table('vehicles')->insert([
+        //     'id' => 18, 'code' => 'V018', 'type' => 'Motor', 'name' => 'Suzuki Ertiga', 'default_picture' => 'uploads/wisata/07_vehicles/ertiga.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jogjakarta', 'price' => '400000'
+        // ]);
     }
 }
