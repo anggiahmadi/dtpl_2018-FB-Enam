@@ -4,9 +4,10 @@
 <div class="home">
     <div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/bromolandscape.jpg') }}"></div>
     <div class="home_content">
-        <div class="home_title">Paket Wisata</div>
+        <div class="home_title">Daftar Hotel</div>
     </div>
 </div>
+
 
 <!-- Search -->
 
@@ -31,7 +32,11 @@
                 <!-- Search Panel -->
 
                 <div class="search_panel active">
+<<<<<<< HEAD
                     <form method="GET" action="{{ url('package') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+=======
+                    <form method="GET" action="{{ url('lodgement') }}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" style="margin-top: -50px;margin-bottom: -20px;">
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
                         {{-- @csrf --}}
                         <div class="search_item" style="width:80% !important;margin-top: 20px;">
                             <div>Kota</div>
@@ -133,7 +138,11 @@
             </div>
         </div>
         <div class="row offers_items">
+<<<<<<< HEAD
         @foreach($packages as $no => $package)
+=======
+        @foreach($lodgements as $no => $lodgement)
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
             <!-- Offers Item -->
             <div class="col-lg-6 offers_col">
                 <div class="offers_item">
@@ -141,13 +150,22 @@
                         <div class="col-lg-6">
                             <div class="offers_image_container">
                                 <!-- Image by https://unsplash.com/@kensuarez -->
+<<<<<<< HEAD
                                 <div class="offers_image_background" style="background-image:url({{ asset($package->default_picture) }})"></div>
                                 <div class="offer_name"><a href="{{ url('package/'.$package->id) }}">{{ $package->name }}</a></div>
+=======
+                                <div class="offers_image_background" style="background-image:url({{ asset($lodgement->default_picture) }})"></div>
+                                <div class="offer_name"><a href="{{ url('lodgement/'.$lodgement->id) }}">{{ $lodgement->name }}</a></div>
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="offers_content">
+<<<<<<< HEAD
                                 <div class="offers_price">Rp {{ number_format($package->price, 0, ',', '.') }}</div>
+=======
+                                <div class="offers_price">Rp {{ number_format(200000, 0, ',', '.') }}</div>
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
                                 <div class="rating_r rating_r_4 offers_rating">
                                     <i></i>
                                     <i></i>
@@ -155,7 +173,11 @@
                                     <i></i>
                                     <i></i>
                                 </div>
+<<<<<<< HEAD
                                 <p class="offers_text">{{ $package->desc }}</p>
+=======
+                                <p class="offers_text">{{ $lodgement->desc }}</p>
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
                                 <div class="offers_icons">
                                     <ul class="offers_icons_list">
                                         <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
@@ -164,7 +186,11 @@
                                         <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
                                     </ul>
                                 </div>
+<<<<<<< HEAD
                                 <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('package/'.$package->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url('order') }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
+=======
+                                <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('lodgement/'.$lodgement->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url('order') }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
                             </div>
                         </div>
                     </div>
@@ -175,6 +201,10 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
 <div class="container">
     @if (session('status'))
         <div class="alert alert-success" role="alert">
@@ -182,4 +212,8 @@
         </div>
     @endif
 </div>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> ae0644c6794883be5b2be9950ba41b99c88f903d
