@@ -8,7 +8,7 @@ class ServiceProviderController extends Controller
 {
     public function index()
     {
-        // Disini kodingan untuk landing page dari penyedia jasa
+        return view('pages.info.service_provider');
     }
 
     public function show($id)

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\ServiceProviderType;
+use App\Models\Package;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -28,5 +30,25 @@ class HomeController extends Controller
         $data['categories'] = Category::get();
         $data['service_provider_types'] = ServiceProviderType::get();
         return view('pages.home.index', $data);
+    }
+
+    public function searchLokasiWisata(Request $request)
+    {
+        $lokasiwisata = $request->get('location');
+        $tipe = $request->get('category_id');
+        $result = DB::table('categories')
+            ->join('t_s_and_c', 'categories.id', '=', 't_s_and_c.category_id')
+            ->join('tourism_sites', 't_s_and_c.tourism_site_id', '=', 'tourism_sites.id')
+            ->select('categories.*', 'tourism_sites.*')
+            ->whereColumn(
+                ['tourism_sites.location', 'like', '%'.$lokasiwisata.'%'],
+                ['t_s_and_c.category_id', '=', $tipe])
+            ->get();
+
+        var_dump($result);
+        die();
+
+        return view('pages.wisata.tourism_sites', compact('result', 'lokasiwisata'));
+
     }
 }

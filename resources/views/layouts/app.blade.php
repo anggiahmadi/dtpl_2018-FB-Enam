@@ -70,7 +70,7 @@
                                         <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Informasi Wisata
                                         </a>
-
+                                        
                                         <div class="dropdown-menu bg-dark text-dark" aria-labelledby="dropdownMenuLink">
                                             <a class="dropdown-item" href="{{ url('package') }}">Paket Wisata</a>
                                             <a class="dropdown-item" href="{{ url('tourism_site') }}">Lokasi Wisata</a>

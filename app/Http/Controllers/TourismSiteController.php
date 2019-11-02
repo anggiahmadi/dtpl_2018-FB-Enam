@@ -2,31 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TourismSite;
 use Illuminate\Http\Request;
+use App\Models\TourismSite;
+use App\Models\Category;
+use App\Models\ServiceProviderType;
 
 class TourismSiteController extends Controller
 {
     public function index(Request $request)
     {
-        $query = $request->query();
+        $data['categories'] = Category::get();
+        $data['service_provider_types'] = ServiceProviderType::get();
 
-        if (!isset($query['location'])) {
-            echo 'location is required';
-            return;
-        }
+        $location = \Request::get('location');
+        $category_id = \Request::get('category_id');
 
-        if (!isset($query['category_id'])) {
-            echo 'category_id is required';
-            return;
-        }
+        $data['tourism_sites'] = TourismSite::get(); // mengambil semua data package
 
-        $tourism = TourismSite::first();
-        return dd($tourism['name']);
-        
-        return dd($request->query());
-        // Disini kodingan untuk landing page dari lokasi wisata
-        return view('pages.wisata.jakarta');
+        return view('pages.tourism_site.index', $data); // melempar data ke view
     }
 
     public function show($id)
