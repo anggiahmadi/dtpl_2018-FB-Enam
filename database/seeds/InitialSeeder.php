@@ -57,9 +57,13 @@ class InitialSeeder extends Seeder
         /* DELETE DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
         DB::table('lodgements')->delete();
         DB::table('lodgement_types')->delete();
+
         /* INSERT DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
         DB::table('lodgements')->insert([
-            'id' => 1, 'code' => 'HTL-01', 'name' => 'Hotel Jakarta', 'location' => 'Jakarta', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+            'id' => 1, 'code' => 'HTL-01', 'name' => 'Aston Rasuna Jakarta','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_rasuna.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.'
+        ]);
+        DB::table('lodgements')->insert([
+            'id' => 2, 'code' => 'HTL-02', 'name' => 'Aston Kuningan Suites','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_kuningan.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Kuningan Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.'
         ]);
 
         /* DELETE DATA TO TOURISM_SITES TABLE */
