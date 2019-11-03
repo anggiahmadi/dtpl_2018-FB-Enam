@@ -148,7 +148,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="offers_content">
-                                <div class="offers_price">Rp {{ number_format(200000, 0, ',', '.') }}</div>
+                                <div class="offers_price">Rp {{ number_format($lodgement->price, 0, ',', '.') }}</div>
                                 <div class="rating_r rating_r_4 offers_rating">
                                     <i></i>
                                     <i></i>
