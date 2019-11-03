@@ -27,6 +27,8 @@ class VehicleController extends Controller
 
     public function show($id)
     {
-        // disini controller untuk detail page dari sewa kendaraan
+        $data['vehicle'] = Vehicle::findOrFail($id);
+
+        return view('pages.vehicle.detail', $data); // melempar data ke view
     }
 }

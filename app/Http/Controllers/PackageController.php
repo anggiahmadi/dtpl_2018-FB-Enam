@@ -27,7 +27,8 @@ class PackageController extends Controller
 
     public function show($id)
     {
-        echo "controller untuk detail page dari paket wisata";
-        // disini controller untuk detail page dari paket wisata
+        $data['package'] = Package::findOrFail($id);
+
+        return view('pages.package.detail', $data); // melempar data ke view
     }
 }

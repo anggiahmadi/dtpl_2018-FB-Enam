@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+DTPL Kelompok 6
+@endsection
+
 @section('content')
 <div class="home">
     <div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/bromolandscape.jpg') }}"></div>

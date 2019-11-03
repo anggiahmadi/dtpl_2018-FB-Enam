@@ -24,6 +24,8 @@ class TourismSiteController extends Controller
 
     public function show($id)
     {
-        // disini controller untuk detail page dari lokasi wisata
+        $data['tourism_site'] = TourismSite::findOrFail($id);
+
+        return view('pages.tourism_site.detail', $data); // melempar data ke view
     }
 }

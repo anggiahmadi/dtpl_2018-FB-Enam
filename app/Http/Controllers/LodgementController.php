@@ -28,7 +28,8 @@ class LodgementController extends Controller
 
     public function show($id)
     {
-        echo "controller untuk detail page dari paket wisata";
-        // disini controller untuk detail page dari paket wisata
+        $data['lodgement'] = Lodgement::findOrFail($id);
+
+        return view('pages.lodgement.detail', $data); // melempar data ke view
     }
 }

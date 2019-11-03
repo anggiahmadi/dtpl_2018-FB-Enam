@@ -177,7 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Emotality\TawkTo\TawkToServiceProvider::class,
-
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -230,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'TawkTo' => Emotality\TawkTo\Facades\TawkTo::class,
-
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

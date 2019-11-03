@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model
 {
-    // Table name
-    protected $table = 'packages';
-
+    public function photo(){
+        return $this->hasMany('App\Models\Photo');
+    }
 }

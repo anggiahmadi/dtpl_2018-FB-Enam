@@ -42,7 +42,7 @@
                                     @endif
                                 @else
                                     <div class="user_box_login user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
-                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ __('Profil') }}</a></div>
+                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
 
                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -248,6 +248,19 @@
     <script src="{{ asset('js/single_listing_custom.js') }}"></script>
     <script src="{{ asset('js/offers_custom.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5dbd9c45154bf74666b72b93/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
     @yield('js')
 </body>
 
