@@ -41,8 +41,9 @@
                                         <div class="user_box_register user_box_link"><a href="{{ url('register') }}">{{ __('Daftar') }}</a></div>
                                     @endif
                                 @else
+                                    <!-- $users as $user -->
                                     <div class="user_box_login user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
-                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ __('Profil') }}</a></div>
+                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
 
                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -61,7 +62,7 @@
                     <div class="row">
                         <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                             <div class="logo_container">
-                                <div class="logo"><a href="#"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
+                                <div class="logo"><a href="{{ url('') }}"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
                             </div>
                             <div class="main_nav_container ml-auto">
                                 <ul class="main_nav_list">
@@ -248,6 +249,19 @@
     <script src="{{ asset('js/single_listing_custom.js') }}"></script>
     <script src="{{ asset('js/offers_custom.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5dbd9c45154bf74666b72b93/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
     @yield('js')
 </body>
 

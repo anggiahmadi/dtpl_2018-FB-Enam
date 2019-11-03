@@ -25,10 +25,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
+        $nama = $request->get('profil');
+
         $data['categories'] = Category::get();
         $data['service_provider_types'] = ServiceProviderType::get();
+        //$data['users'] = DB::table('users')->select('*')->whereColumn('name', 'like', '%'.$nama.'%')->get();
         return view('pages.home.index', $data);
     }
 
@@ -45,8 +48,8 @@ class HomeController extends Controller
                 ['t_s_and_c.category_id', '=', $tipe])
             ->get();
 
-        var_dump($result);
-        die();
+        // var_dump($result);
+        // die();
 
         return view('pages.wisata.tourism_sites', compact('result', 'lokasiwisata'));
 

@@ -712,5 +712,4 @@ DTPL Kelompok 6
         </div>
     </div>
 </div>
-
 @endsection
