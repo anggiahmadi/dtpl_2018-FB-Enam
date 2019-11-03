@@ -2,11 +2,6 @@
 
 @section('content')
 <div class="home">
-<<<<<<< HEAD
-    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/about_background.jpg') }}"></div>
-    <div class="home_content">
-        <div class="home_title">Paket Wisata</div>
-=======
     <div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/bromolandscape.jpg') }}"></div>
     <div class="home_content">
         <div class="home_title ">Paket Wisata</div>
@@ -157,7 +152,6 @@
             </div>
         </div>
 
->>>>>>> 779fb8617195292f90ee91ef04981164560a92e8
     </div>
 </div>
 

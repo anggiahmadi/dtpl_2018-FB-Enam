@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// use App\Models\Order;
+use App\Models\TourismSite;
+
 class OrderController extends Controller
 {
     /**
@@ -11,9 +14,22 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        echo "koding disini ya";
+        // Memeriksa apakah dalam query request terdapat parameter tourism_sites.
+        if ($request->tourism_sites) {
+            // Membersihkan input yang diperoleh dari user.
+            $input = strip_tags($request->tourism_sites);
+
+            $tourism_site = TourismSite::find($input);
+
+            if (is_null($tourism_site)) {
+                echo "Paket wisata tidak ditemukan.";
+                return;
+            }
+
+            return view('pages.order.index', [ 'tourism_site' => $tourism_site ]);
+        }
     }
 
     /**
@@ -34,7 +50,20 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Membersihkan input yang diperoleh dari user.
+        $tourism_input = strip_tags($request->tourism_site);
+        $jumlah_tiket =  strip_tags($request->jumlah_tiket);
+        $metode_pembayaran =  strip_tags($request->metode_pembayaran);
+
+        $tourism_site = TourismSite::find($tourism_input);
+
+        if (is_null($tourism_site)) {
+            echo "Paket wisata tidak ditemukan.";
+            return;
+        }
+        
+        $total_harga = $jumlah_tiket * $tourism_site->price;
+        echo "Anda memesan paket wisata: $tourism_site->name. <br/>Jumlah tiket: $jumlah_tiket. <br/>Total harga: Rp $total_harga<br/> Metode pembayaran: $metode_pembayaran";
     }
 
     /**
