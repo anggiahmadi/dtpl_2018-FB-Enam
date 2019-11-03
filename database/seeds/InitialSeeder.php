@@ -131,7 +131,7 @@ class InitialSeeder extends Seeder
         DB::table('packages')->delete();
         /* INSERT DATA TO PACKAGES TABLE */
         DB::table('packages')->insert([
-            'id' => 1, 'code' => 'P001', 'name' => 'Paket Rekreasi Jakarta', 'desc' => 'Dunia Fantasi adalah salah satu tempat rekresi yang tepat untuk wahana bermain dan berkumpul bersama keluarga atau teman.', 'location' => 'Jakarta', 'price' => '3000000', 'default_picture' => 'uploads/wisata/01_jakarta/dufan.jpg'
+            'id' => 1, 'code' => 'P001', 'name' => 'Paket Tour Jakarta', 'desc' => 'Berkeliling di area Jakarta dengan mengunjungi beberapa tempat bersejarah mulai dari Monumen Nasional (Monas), Istana Kepresidenan, Kota Tua, Museum Fatahillah, dan Pelabuhan Sunda Kelapa. Dipandu oleh kami, Anda akan menjelajahi lokasi-lokasi bersejarah, menarik, dan unik di Jakarta.', 'location' => 'Jakarta', 'price' => '3000000', 'default_picture' => 'uploads/wisata/01_jakarta/paket_tour_jkt_1.jpg'
         ]);
         DB::table('packages')->insert([
             'id' => 2, 'code' => 'P002', 'name' => 'Paket Wisata Lembang', 'desc' => 'Lembang merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Bandung', 'price' => '500000', 'default_picture' => 'uploads/wisata/05_jawa_barat/dusun_bambu.jpg'

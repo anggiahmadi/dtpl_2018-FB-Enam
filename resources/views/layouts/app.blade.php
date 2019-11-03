@@ -41,9 +41,11 @@
                                         <div class="user_box_register user_box_link"><a href="{{ url('register') }}">{{ __('Daftar') }}</a></div>
                                     @endif
                                 @else
+                                    <!-- $users as $user -->
                                     <div class="user_box_login user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
                                     <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ __('Profil') }}</a></div>
-
+                                    <!-- <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ __('Profil') }}</a></div> -->
+                                   
                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

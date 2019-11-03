@@ -14,6 +14,9 @@ class VisitorController extends Controller
     public function index()
     {
         //
+        $data['users'] = User::get();
+
+        return view('pages.visitor.index', $data); // melempar data ke view
     }
 
     /**
