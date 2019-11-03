@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lodgement extends Model
 {
-    //Table name
-    protected $table = 'lodgements';
+    public function photo(){
+        return $this->hasMany('App\Models\Photo');
+    }
+    public function lodgement_type(){
+        return $this->hasMany('App\Models\LodgementType');
+    }
 }

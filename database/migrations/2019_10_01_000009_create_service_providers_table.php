@@ -18,6 +18,7 @@ class CreateServiceProvidersTable extends Migration
             $table->string('code')->unique();
             $table->string('name');
             $table->string('default_picture')->nullable();
+            $table->string('location');
             $table->text('desc')->nullable();
             $table->double('price')->default(0);
             $table->timestamps();

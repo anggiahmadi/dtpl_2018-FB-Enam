@@ -45,6 +45,7 @@ class InitialSeeder extends Seeder
 
         /* DELETE DATA TO SERVICE PROVIDER TYPES TABLE */
         DB::table('service_provider_types')->delete();
+        DB::table('service_providers')->delete();
 
         /* INSERT DATA TO SERVICE PROVIDER TYPES TABLE */
         DB::table('service_provider_types')->insert([
@@ -54,16 +55,101 @@ class InitialSeeder extends Seeder
             'id' => 2, 'code' => '02', 'name' => 'Fotografer'
         ]);
 
-        /* DELETE DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
-        DB::table('lodgements')->delete();
-        DB::table('lodgement_types')->delete();
+        DB::table('service_providers')->insert([
+            'id' => 1, 'code' => 'SP-01', 'name' => 'Mr. X', 'price' => 200000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_01.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('service_providers')->insert([
+            'id' => 2, 'code' => 'SP-02', 'name' => 'Mr. Y', 'price' => 150000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_02.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('service_providers')->insert([
+            'id' => 3, 'code' => 'SP-03', 'name' => 'Mr. Z', 'price' => 180000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_03.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('service_providers')->insert([
+            'id' => 4, 'code' => 'SP-04', 'name' => 'Mr. XYZ', 'price' => 175000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/tour_guide_jkt_01.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
 
+        DB::table('s_p_and_s_p_t')->insert([
+            'service_provider_id' => 1, 'service_provider_type_id' => 2
+        ]);
+        DB::table('s_p_and_s_p_t')->insert([
+            'service_provider_id' => 1, 'service_provider_type_id' => 1
+        ]);
+        DB::table('s_p_and_s_p_t')->insert([
+            'service_provider_id' => 2, 'service_provider_type_id' => 2
+        ]);
+        DB::table('s_p_and_s_p_t')->insert([
+            'service_provider_id' => 3, 'service_provider_type_id' => 2
+        ]);
+        DB::table('s_p_and_s_p_t')->insert([
+            'service_provider_id' => 4, 'service_provider_type_id' => 1
+        ]);
+
+        /* DELETE DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
+       
+        DB::table('lodgement_types')->delete();
+        DB::table('lodgements')->delete();
+
+ 
         /* INSERT DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
         DB::table('lodgements')->insert([
-            'id' => 1, 'code' => 'HTL-01', 'name' => 'Aston Rasuna Jakarta','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_rasuna.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.'
+            'id' => 1, 'code' => 'HTL-01', 'name' => 'Aston Rasuna Jakarta','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_rasuna.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.','price' =>'1150710'
         ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 1, 'code' => 'HTL-01-DBL', 'name' => 'Double Room', 'price' => 500000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 1, 'code' => 'HTL-01-TWN', 'name' => 'Twin Room', 'price' => 600000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 1, 'code' => 'HTL-01-HRT', 'name' => 'Heritage Room', 'price' => 1000000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 1, 'code' => 'HTL-01-PRM', 'name' => 'Premier Room', 'price' => 1100000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 1, 'code' => 'HTL-01-RHRT', 'name' => 'Royal Heritage Room', 'price' => 1200000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+
         DB::table('lodgements')->insert([
-            'id' => 2, 'code' => 'HTL-02', 'name' => 'Aston Kuningan Suites','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_kuningan.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Kuningan Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.'
+            'id' => 2, 'code' => 'HTL-02', 'name' => 'Aston Kuningan Suites','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_kuningan.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Kuningan Suites is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.','price' =>'1116830'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 2, 'code' => 'HTL-02-DBL', 'name' => 'Double Room', 'price' => 600000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 2, 'code' => 'HTL-02-TWN', 'name' => 'Twin Room', 'price' => 700000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 2, 'code' => 'HTL-02-HRT', 'name' => 'Heritage Room', 'price' => 1100000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 2, 'code' => 'HTL-02-PRM', 'name' => 'Premier Room', 'price' => 1200000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 2, 'code' => 'HTL-02-RHRT', 'name' => 'Royal Heritage Room', 'price' => 1300000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+        ]);
+
+        DB::table('lodgements')->insert([
+            'id' => 3, 'code' => 'HTL-03', 'name' => 'Aston Priority Simatupang Hotel & Conference Center','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_simatupang.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Priority Simatupang Hotel & Conference Center is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.','price' =>'1116830'
+        ]);
+
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 3, 'code' => '1BedAstKun', 'name' => '1 Bedroom Apartment', 'desc'=>'Fully furnished One Bedroom Apartment features living & dining room, TV cable with 60 local & international channels, private balcony, air conditioned, en suite bathroom with complimentary amenities, high speed wireless internet, minibar and tea coffee maker at dining table.','price' =>'762851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 3, 'code' => '2BedAstKun', 'name' => '2 Bedroom Apartment', 'desc'=>'These 100 sqm two-bedroom apartment are ideal for guest with small families who desire greater space and privacy. But not limited to that, these room category is also suitable for business traveller that travelling together with collages, or for long stay term.','price' =>'933851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 3, 'code' => '3BedAstKun', 'name' => '3 Bedroom Apartment', 'desc'=>'The three bedroom apartments are perfect for guest with lager family size, spacious 173 sqm with three separate bedrooms whereby each family member gets to enjoy his/her own space and privacy.','price' =>'1693851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 3, 'code' => '1BedAstRas', 'name' => '1 Bedroom Apartment', 'desc'=>'Fully furnished One Bedroom Apartment features living & dining room, TV cable with 60 local & international channels, private balcony, air conditioned, en suite bathroom with complimentary amenities, high speed wireless internet, minibar and tea coffee maker at dining table.','price' =>'762851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 3, 'code' => '2BedAstRas', 'name' => '2 Bedroom Apartment', 'desc'=>'These 100 sqm two-bedroom apartment are ideal for guest with small families who desire greater space and privacy. But not limited to that, these room category is also suitable for business traveller that travelling together with collages, or for long stay term.','price' =>'933851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'lodgement_id' => 3, 'code' => '3BedAstRas', 'name' => '3 Bedroom Apartment', 'desc'=>'The three bedroom apartments are perfect for guest with lager family size, spacious 173 sqm with three separate bedrooms whereby each family member gets to enjoy his/her own space and privacy.','price' =>'1693851'
         ]);
 
         /* DELETE DATA TO TOURISM_SITES TABLE */
@@ -198,5 +284,16 @@ class InitialSeeder extends Seeder
         // DB::table('vehicles')->insert([
         //     'id' => 18, 'code' => 'V018', 'type' => 'Motor', 'name' => 'Suzuki Ertiga', 'default_picture' => 'uploads/wisata/07_vehicles/ertiga.jpg', 'desc' => 'Suzuki Ertiga merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jogjakarta', 'price' => '400000'
         // ]);
+
+        /* DELETE DATA TO PHOTOS TABLE */
+        DB::table('photos')->delete();
+        
+        /* INSERT DATA TO photos TABLE */
+        DB::table('photos')->insert([
+            'lodgement_id' => 1, 'picture' => 'uploads/wisata/01_jakarta/jakarta_aston_rasuna.jpg'
+        ]);
+        DB::table('photos')->insert([
+            'lodgement_id' => 2, 'picture' => 'uploads/wisata/01_jakarta/jakarta_aston_kuningan.jpg'
+        ]);
     }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app-withoutfooter')
+@extends('layouts.app')
 
 @section('content')
 <!-- Home -->

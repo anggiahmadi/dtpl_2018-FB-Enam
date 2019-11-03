@@ -20,6 +20,7 @@ class CreateLodgementsTable extends Migration
             $table->string('default_picture')->nullable();
             $table->string('location');
             $table->text('desc')->nullable();
+            $table->double('price')->default(0);
             $table->timestamps();
         });
     }
