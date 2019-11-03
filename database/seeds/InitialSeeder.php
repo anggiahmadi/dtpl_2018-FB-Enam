@@ -56,17 +56,24 @@ class InitialSeeder extends Seeder
         ]);
 
         DB::table('service_providers')->insert([
-            'id' => 1, 'code' => 'SP-01', 'name' => 'Mr. X', 'price' => 200000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_01.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+            'id' => 1, 'code' => 'SP-01', 'name' => 'Mr. Ahmadi', 'price' => 200000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_01.jpg', 'desc' => 'Ahmadi adalah seorang fotografer pernikahan yang populer di Pulau Jawa, khususnya di Jakarta. Berawal dari sebuah hobby, Ahmadi mulai menekuni hobbynya sejak tahun 2011 dan merintis karirnya dalam dunia fotografi sejak 2014. Ahmadi fokus pada fotografi pernikahan dan telah memiliki karya hasi foto pernikahan di beberapa acara.'
         ]);
         DB::table('service_providers')->insert([
-            'id' => 2, 'code' => 'SP-02', 'name' => 'Mr. Y', 'price' => 150000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_02.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+            'id' => 2, 'code' => 'SP-02', 'name' => 'Mr. Deddy', 'price' => 150000, 'location' => 'Jogjakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_02.jpg', 'desc' => 'Deddy adalah seorang fotografer di Pulau Jawa, khususnya di Jogjakarta. Berawal dari sebuah hobby, Deddy mulai menekuni hobbynya sejak tahun 2015 dan aktif mengikuti aktivitas photography di kampus.'
         ]);
         DB::table('service_providers')->insert([
-            'id' => 3, 'code' => 'SP-03', 'name' => 'Mr. Z', 'price' => 180000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_03.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+            'id' => 3, 'code' => 'SP-03', 'name' => 'Mr. Sacana', 'price' => 180000, 'location' => 'Bandung', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_04.jpg', 'desc' => 'Sacana adalah seorang fotografer terkenal di Bandung. Sacana memiliki beberapa keahlian, yaitu memotret pre-wedding, pernikahan, foto kelahiran, kehamilan, keluarga dan banyak lagi. Sacana menjadi fotografer pilihan utama para selebgram di Bandung.'
         ]);
         DB::table('service_providers')->insert([
-            'id' => 4, 'code' => 'SP-04', 'name' => 'Mr. XYZ', 'price' => 175000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/tour_guide_jkt_01.jpg', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
+            'id' => 4, 'code' => 'SP-04', 'name' => 'Ms. Mulyani', 'price' => 175000, 'location' => 'Bandung', 'default_picture' => 'uploads/wisata/01_jakarta/fotografer_jkt_05.jpg', 'desc' => 'Mulyani adalah pendatang baru dalam dunia fotografi di Indonesia. Fotografer wanita ini terkenal untuk pemotretan pre-wedding. Menunjukkan kesan romantis menjadi ciri dalam tiap fotonya. Hasil fotonya selalu disukai oleh para kliennya. Kini wanita yang sedak kuliah di MTI UI Salemba itu sudah memotret puluhan selebgram di Indonesia.'
         ]);
+        DB::table('service_providers')->insert([
+            'id' => 5, 'code' => 'SP-05', 'name' => 'Ms. Nove', 'price' => 175000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/tour_guide_jkt_03.jpg', 'desc' => 'Nove mempunyai pengalaman menjadi pemandu wisata. Sedang menjalani perkuliahan di sebuah Universitas Negeri di Jakarta. Fasih dalam berbahasa Inggris dan Indonesia.'
+        ]);
+        DB::table('service_providers')->insert([
+            'id' => 6, 'code' => 'SP-06', 'name' => 'Ms. Andina', 'price' => 175000, 'location' => 'Jakarta', 'default_picture' => 'uploads/wisata/01_jakarta/tour_guide_jkt_05.jpg', 'desc' => 'Andina mempunyai pengalaman menjadi pemandu wisata. Sedang menjalani perkuliahan di sebuah Universitas Negeri di Jakarta. Fasih dalam berbahasa Inggris dan Indonesia.'
+        ]);
+
 
         DB::table('s_p_and_s_p_t')->insert([
             'service_provider_id' => 1, 'service_provider_type_id' => 2

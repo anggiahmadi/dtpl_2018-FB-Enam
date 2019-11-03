@@ -80,8 +80,8 @@ DTPL Kelompok 6
                             <div>Tipe Kendaraan</div>
                             <select name="type" id="type" class="dropdown_item_select search_input" required="required">
                                 <option value="" disabled>Pilih Tipe Kendaraan</option>
-                                <option value="bike" @if(Request::get('type') == 'bike') selected @endif>Motor</option>
-                                <option value="car" @if(Request::get('type') == 'car') selected @endif>Mobil</option>
+                                <option value="bike" @if(Request::get('type') == 'Motor') selected @endif>Motor</option>
+                                <option value="car" @if(Request::get('type') == 'Mobil') selected @endif>Mobil</option>
                             </select>
                         </div>
                         <button class="button search_button">search<span></span><span></span><span></span></button>
