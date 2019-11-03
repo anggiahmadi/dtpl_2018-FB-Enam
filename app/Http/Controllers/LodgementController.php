@@ -18,9 +18,13 @@ class LodgementController extends Controller
         $location = \Request::get('location');
 
         if(!empty($location)){
-            $data['lodgements'] = Lodgement::where('lodgements.location', 'like', '%'.$location.'%')->get(); // mengambil semua data package
+            $data['lodgements'] = Lodgement::where('lodgements.location', 'like', '%'.$location.'%')
+                                            ->orWhere('lodgements.name', 'like', '%'.$location.'%')
+                                            ->get(); // mengambil semua data package
+            //$data['lodgements'] = Lodgement::join('lodgement_types', 'lodgements.id', '=', 'lodgement_types.lodgement_id')->where('lodgements.location', 'like', '%'.$location.'%')->get(); // mengambil semua data package
         }else{
             $data['lodgements'] = Lodgement::get(); // mengambil semua data package
+            //$data['lodgements'] = Lodgement::join('lodgement_types', 'lodgements.id', '=', 'lodgement_types.lodgement_id')->get(); // mengambil semua data package
         }
 
         return view('pages.lodgement.index', $data); // melempar data ke view

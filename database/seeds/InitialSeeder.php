@@ -85,12 +85,17 @@ class InitialSeeder extends Seeder
         ]);
 
         /* DELETE DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
-        DB::table('lodgements')->delete();
+       
         DB::table('lodgement_types')->delete();
+        DB::table('lodgements')->delete();
 
+ 
         /* INSERT DATA TO LODGEMENTS AND LODGMENT TYPES TABLE */
         DB::table('lodgements')->insert([
-            'id' => 1, 'code' => 'HTL-01', 'name' => 'Aston Rasuna Jakarta','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_rasuna.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.'
+            'id' => 1, 'code' => 'HTL-01', 'name' => 'Aston Rasuna Jakarta','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_rasuna.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.','price' =>'1150710'
+        ]);
+        DB::table('lodgements')->insert([
+            'id' => 2, 'code' => 'HTL-02', 'name' => 'Aston Kuningan Suites','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_kuningan.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Kuningan Suites is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.','price' =>'1116830'
         ]);
         DB::table('lodgement_types')->insert([
             'lodgement_id' => 1, 'code' => 'HTL-01-DBL', 'name' => 'Double Room', 'price' => 500000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
@@ -110,7 +115,27 @@ class InitialSeeder extends Seeder
 
 
         DB::table('lodgements')->insert([
-            'id' => 2, 'code' => 'HTL-02', 'name' => 'Aston Kuningan Suites','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_kuningan.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Kuningan Rasuna is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.'
+            'id' => 3, 'code' => 'HTL-03', 'name' => 'Aston Priority Simatupang Hotel & Conference Center','default_picture' => 'uploads/wisata/01_jakarta/jakarta_aston_simatupang.jpg', 'location' => 'Jakarta', 'desc' => 'Aston Priority Simatupang Hotel & Conference Center is preparing some attractive deals to welcoming Christmas and New Year 2017 such as Express Your Thankgiving - food promotion and year-end celeberation with theme An Evening of Batavia Glamour. Express Your Thanksgiving provide whole roasted turkey (with delivery service) that can be enjoyed together with family or friend at home.','price' =>'1116830'
+        ]);
+
+        DB::table('lodgement_types')->insert([
+            'id' => 1,'lodgement_id' => 2, 'code' => '1BedAstKun', 'name' => '1 Bedroom Apartment', 'default_picture'=> '','desc'=>'Fully furnished One Bedroom Apartment features living & dining room, TV cable with 60 local & international channels, private balcony, air conditioned, en suite bathroom with complimentary amenities, high speed wireless internet, minibar and tea coffee maker at dining table.','price' =>'762851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'id' => 2,'lodgement_id' => 2, 'code' => '2BedAstKun', 'name' => '2 Bedroom Apartment', 'default_picture'=> '','desc'=>'These 100 sqm two-bedroom apartment are ideal for guest with small families who desire greater space and privacy. But not limited to that, these room category is also suitable for business traveller that travelling together with collages, or for long stay term.','price' =>'933851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'id' => 3,'lodgement_id' => 2, 'code' => '3BedAstKun', 'name' => '3 Bedroom Apartment', 'default_picture'=> '','desc'=>'The three bedroom apartments are perfect for guest with lager family size, spacious 173 sqm with three separate bedrooms whereby each family member gets to enjoy his/her own space and privacy.','price' =>'1693851'
+        ]);
+
+        DB::table('lodgement_types')->insert([
+            'id' => 4,'lodgement_id' => 1, 'code' => '1BedAstRas', 'name' => '1 Bedroom Apartment', 'default_picture'=> '','desc'=>'Fully furnished One Bedroom Apartment features living & dining room, TV cable with 60 local & international channels, private balcony, air conditioned, en suite bathroom with complimentary amenities, high speed wireless internet, minibar and tea coffee maker at dining table.','price' =>'762851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'id' => 5,'lodgement_id' => 1, 'code' => '2BedAstRas', 'name' => '2 Bedroom Apartment', 'default_picture'=> '','desc'=>'These 100 sqm two-bedroom apartment are ideal for guest with small families who desire greater space and privacy. But not limited to that, these room category is also suitable for business traveller that travelling together with collages, or for long stay term.','price' =>'933851'
+        ]);
+        DB::table('lodgement_types')->insert([
+            'id' => 6,'lodgement_id' => 1, 'code' => '3BedAstRas', 'name' => '3 Bedroom Apartment', 'default_picture'=> '','desc'=>'The three bedroom apartments are perfect for guest with lager family size, spacious 173 sqm with three separate bedrooms whereby each family member gets to enjoy his/her own space and privacy.','price' =>'1693851'
         ]);
         DB::table('lodgement_types')->insert([
             'lodgement_id' => 2, 'code' => 'HTL-02-DBL', 'name' => 'Double Room', 'price' => 600000, 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.'
