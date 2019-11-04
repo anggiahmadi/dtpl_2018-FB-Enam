@@ -174,19 +174,19 @@ class InitialSeeder extends Seeder
             dengan warna, keindahan dan sekaligus misteri yang akan membuat anda serasa sedang berpetualang.', 'location' => 'jakarta', 'price' => '150000', 'default_picture' => 'uploads/wisata/01_jakarta/jakarta_aquarium.jpg'
         ]);
         DB::table('tourism_sites')->insert([
-            'id' => 4, 'code' => 'TS004', 'name' => 'Candi Prambanan', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jogja', 'price' => '5000', 'default_picture' => 'uploads/wisata/02_jogja/candi_prambanan.jpg'
+            'id' => 4, 'code' => 'TS004', 'name' => 'Candi Prambanan', 'desc' => 'Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi. Candi ini dipersembahkan untuk Trimurti, tiga dewa utama Hindu yaitu Brahma sebagai dewa pencipta, Wishnu sebagai dewa pemelihara, dan Siwa sebagai dewa pemusnah.', 'location' => 'jogja', 'price' => '5000', 'default_picture' => 'uploads/wisata/02_jogja/candi_prambanan.jpg'
         ]);
         DB::table('tourism_sites')->insert([
-            'id' => 5, 'code' => 'TS005', 'name' => 'Candi Borobudur', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jogja', 'price' => '5000', 'default_picture' => 'uploads/wisata/02_jogja/candi_borobudur.jpg'
+            'id' => 5, 'code' => 'TS005', 'name' => 'Candi Borobudur', 'desc' => 'Candi Borobudur merupakan sebuah candi Buddha terbesan di dunia yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia.', 'location' => 'jogja', 'price' => '5000', 'default_picture' => 'uploads/wisata/02_jogja/candi_borobudur.jpg'
         ]);
         DB::table('tourism_sites')->insert([
-            'id' => 6, 'code' => 'TS006', 'name' => 'Hutan Pinus', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jogja', 'price' => '15000', 'default_picture' => 'uploads/wisata/02_jogja/hutan_pinus.jpg'
+            'id' => 6, 'code' => 'TS006', 'name' => 'Hutan Pinus', 'desc' => 'Hutan Pinus merupakan salah satu wisata yang dapat membuat wisatawan menyaksikan deretan pohon pinus yang dapat memanjakan mata.', 'location' => 'jogja', 'price' => '15000', 'default_picture' => 'uploads/wisata/02_jogja/hutan_pinus.jpg'
         ]);
         DB::table('tourism_sites')->insert([
             'id' => 7, 'code' => 'TS007', 'name' => 'Bukit Kolom', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jawa timur', 'price' => '10000', 'default_picture' => 'uploads/wisata/03_jawa_timur/bukit_kolam.jpg'
         ]);
         DB::table('tourism_sites')->insert([
-            'id' => 8, 'code' => 'TS008', 'name' => 'Madakari Bromo', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jawa timur', 'price' => '10000', 'default_picture' => 'uploads/wisata/03_jawa_timur/bukit_kolam.jpg'
+            'id' => 8, 'code' => 'TS008', 'name' => 'Air Terjun Madakari', 'desc' => 'Air Terjun Madakari adalah sebuah air terjun yang terletak di Kabupaten Probolinggo, Provinsi Jawa Timur. Air terjun setinggi 200 meter ini merupakan air terjun tertinggi di Pulau Jawa dan tertinggi kedua di Indonesia..', 'location' => 'jawa timur', 'price' => '10000', 'default_picture' => 'uploads/wisata/03_jawa_timur/bukit_kolam.jpg'
         ]);
         DB::table('tourism_sites')->insert([
             'id' => 9, 'code' => 'TS009', 'name' => 'Bukit Kolom', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jawa timur', 'price' => '10000', 'default_picture' => 'uploads/wisata/03_jawa_timur/bukit_kolam.jpg'
@@ -208,6 +208,24 @@ class InitialSeeder extends Seeder
         ]);
         DB::table('tourism_sites')->insert([
             'id' => 15, 'code' => 'TS015', 'name' => 'Depok Fantasi', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jawa barat', 'price' => '30000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
+        ]);
+        DB::table('tourism_sites')->insert([
+            'id' => 16, 'code' => 'TS016', 'name' => 'Taman Mini Indonesia Indah', 'desc' => 'Taman Mini Indonesia Indah adalah taman hiburan ikonik bertemakan Indonesia yang populer sejak tahun 90-an. Pengunjung bisa menikmati berbagai wahana dan fasilitas seperti misalnya Anjungan Daerah, kereta gantung, Teater 4D, museum, Teater IMAX Keong Mas, dan masih banyak lagi.', 'location' => 'jakarta', 'price' => '15000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
+        ]);
+        DB::table('tourism_sites')->insert([
+            'id' => 17, 'code' => 'TS017', 'name' => 'Pantai Ancol', 'desc' => 'Pantai Ancol adalah jalur pantai wisata yang terdiri dari lima pantai, yaitu Pantai Indah, Elok, Ria, Festival Ancol, dan Karnaval Ancol. Pengunjung bisa berfoto, bermain pasir, jogging, atau makan di salah satu restoran yang ada di kawasan wisata terpadu ini.', 'location' => 'jakarta', 'price' => '15000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
+        ]);
+        DB::table('tourism_sites')->insert([
+            'id' => 18, 'code' => 'TS018', 'name' => 'Waterbom', 'desc' => 'Waterbom adalah taman wisata air populer yang berlokasi di Pantai Indah Kapuk. Waterbom menawarkan berbagai wahana kolam renang untuk semua umur, dengan tingkat ketegangan yang beragam.', 'location' => 'jakarta', 'price' => '280000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
+        ]);
+        DB::table('tourism_sites')->insert([
+            'id' => 19, 'code' => 'TS019', 'name' => 'Kebun Binatang Ragunan', 'desc' => 'Kebun Binatang Ragunan adalah tujuan wisata keluarga dan edukasi yang cocok untuk semua umur. Ragunan tidak hanya menyimpan koleksi lebih dari 290 spesies hewan, tetapi juga berbagai fasilitas hiburan serta pendidikan.', 'location' => 'jakarta', 'price' => '8000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
+        ]);
+        DB::table('tourism_sites')->insert([
+            'id' => 20, 'code' => 'TS020', 'name' => 'Museum Nasional Indonesia', 'desc' => 'Museum Nasional Indonesia adalah museum di Jakarta Pusat yang menyimpan koleksi prasasti, arca, senjata tradisional, tekstil, gerabah, manuskrip, hasil penggalian arkeologis, serta benda kuno lainnya dari berbagai wilayah Nusantara.', 'location' => 'jakarta', 'price' => '5000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
+        ]);
+        DB::table('tourism_sites')->insert([
+            'id' => 21, 'code' => 'TS021', 'name' => 'Pulau Tidung', 'desc' => 'Pulau Tidung adalah salah satu pulau paling terkenal di gugusan Kepulauan Seribu, yang berada di lepas pantai Jakarta. Pulau Tidung terdiri dari dua pulau, Tidung Besar dan Tidung Kecil, dengan sebuah jembatan bernama Jembatan Cinta menghubungkan mereka. Jembatan tersebut sering menjadi tempat berfoto serta melihat matahari terbenam.', 'location' => 'jakarta', 'price' => '20000', 'default_picture' => 'uploads/wisata/05_jawa_barat/depok_fantasi.jpg'
         ]);
 
 
