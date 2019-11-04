@@ -170,7 +170,8 @@ class InitialSeeder extends Seeder
             'id' => 2, 'code' => 'TS002', 'name' => 'Kota Tua', 'desc' => 'Kota Tua merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'jakarta', 'price' => '5000', 'default_picture' => 'uploads/wisata/01_jakarta/kota_tua.jpg'
         ]);
         DB::table('tourism_sites')->insert([
-            'id' => 3, 'code' => 'TS003', 'name' => 'Jakarta Aquarium', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jakarta', 'price' => '150000', 'default_picture' => 'uploads/wisata/01_jakarta/jakarta_aquarium.jpg'
+            'id' => 3, 'code' => 'TS003', 'name' => 'Jakarta Aquarium', 'desc' => 'Jakarta Aquarium menghadirkan konsep berlibur di alam yang menampilkan kekayaan alam bawah laut Indonesia yang penuh
+            dengan warna, keindahan dan sekaligus misteri yang akan membuat anda serasa sedang berpetualang.', 'location' => 'jakarta', 'price' => '150000', 'default_picture' => 'uploads/wisata/01_jakarta/jakarta_aquarium.jpg'
         ]);
         DB::table('tourism_sites')->insert([
             'id' => 4, 'code' => 'TS004', 'name' => 'Candi Prambanan', 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget elit in est faucibus semper sit amet mattis nulla. Praesent eget congue enim. Pellentesque volutpat.', 'location' => 'jogja', 'price' => '5000', 'default_picture' => 'uploads/wisata/02_jogja/candi_prambanan.jpg'
