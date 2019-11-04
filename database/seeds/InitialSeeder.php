@@ -228,10 +228,16 @@ class InitialSeeder extends Seeder
             'id' => 1, 'code' => 'P001', 'name' => 'Paket Tour Jakarta', 'desc' => 'Berkeliling di area Jakarta dengan mengunjungi beberapa tempat bersejarah mulai dari Monumen Nasional (Monas), Istana Kepresidenan, Kota Tua, Museum Fatahillah, dan Pelabuhan Sunda Kelapa. Dipandu oleh kami, Anda akan menjelajahi lokasi-lokasi bersejarah, menarik, dan unik di Jakarta.', 'location' => 'Jakarta', 'price' => '3000000', 'default_picture' => 'uploads/wisata/01_jakarta/paket_tour_jkt_1.jpg'
         ]);
         DB::table('packages')->insert([
-            'id' => 2, 'code' => 'P002', 'name' => 'Paket Wisata Lembang', 'desc' => 'Lembang merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Bandung', 'price' => '500000', 'default_picture' => 'uploads/wisata/05_jawa_barat/dusun_bambu.jpg'
+            'id' => 2, 'code' => 'P002', 'name' => 'Paket Wisata Surabaya', 'desc' => 'Nah, ternyata banyak lho, alternatif objek wisata Surabaya selain pusat perbelanjaan. Kamu bisa mencoba  wisata alam, berfoto ria dengan pemandangan pelabuhan yang menakjubkan, hingga menikmati malam dengan pemandangan lampu berwarna-warni.', 'location' => 'Surabaya', 'price' => '500000', 'default_picture' => 'uploads/wisata/03_jawa_timur/surabaya.jpg'
         ]);
         DB::table('packages')->insert([
-            'id' => 3, 'code' => 'P003', 'name' => 'Paket Wisata Kepulauan Seribu', 'desc' => 'Kepulauan seribu merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jakarta', 'price' => '400000', 'default_picture' => 'uploads/wisata/01_jakarta/kota_tua.jpg'
+            'id' => 3, 'code' => 'P003', 'name' => 'Paket Wisata Bandung', 'desc' => 'Bandung dikenal sebagai lautan api, mengunjungi tempat-tempat di area bandung gak bakal nyesel looh, daerah yang sejuk dan gak kalah sama kota Jakarta.', 'location' => 'Bandung', 'price' => '400000', 'default_picture' => 'uploads/wisata/05_jawa_barat/bandung.jpg'
+        ]);
+        DB::table('packages')->insert([
+            'id' => 4, 'code' => 'P004', 'name' => 'Paket Wisata Lembang', 'desc' => 'Lembang merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Bandung.', 'location' => 'Bandung', 'price' => '500000', 'default_picture' => 'uploads/wisata/05_jawa_barat/dusun_bambu.jpg'
+        ]);
+        DB::table('packages')->insert([
+            'id' => 5, 'code' => 'P005', 'name' => 'Paket Kepulauan Seribu', 'desc' => 'Kepulauan seribu merupakan objek wisata dimana kamu bisa belajar sejarah di tengah-tengah modernisasi Kota Jakarta.', 'location' => 'Jakarta', 'price' => '400000', 'default_picture' => 'uploads/wisata/01_jakarta/kota_tua.jpg'
         ]);
 
         /* DELETE DATA TO VEHICLES TABLE */

@@ -146,7 +146,7 @@ DTPL Kelompok 6
                             <div class="offers_image_container">
                                 <!-- Image by https://unsplash.com/@kensuarez -->
                                 <div class="offers_image_background" style="background-image:url({{ asset($package->default_picture) }})"></div>
-                                <div class="offer_name"><a href="{{ url('package/'.$package->id) }}">{{ $package->name }}</a></div>
+                                <div class="offer_name" style="width: 250px"><a href="{{ url('package/'.$package->id) }}">{{ $package->name }}</a></div>
                             </div>
                         </div>
                         <div class="col-lg-6">
