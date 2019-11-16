@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Lodgement;
+use App\Models\LodgementType;
 use App\Models\Category;
 use App\Models\ServiceProviderType;
 
@@ -35,5 +36,13 @@ class LodgementController extends Controller
         $data['lodgement'] = Lodgement::findOrFail($id);
 
         return view('pages.lodgement.detail', $data); // melempar data ke view
+    }
+
+    public function get_by_id($id){
+        return LodgementType::where('lodgement_id', $id)->get();
+    }
+
+    public function get_type_by_id($id){
+        return LodgementType::findOrFail($id);
     }
 }

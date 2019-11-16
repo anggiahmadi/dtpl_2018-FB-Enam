@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-// use App\Models\Order;
-use App\Models\TourismSite;
+use App\Models\Order;
+use Auth;
 
 class OrderController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,20 +24,9 @@ class OrderController extends Controller
      */
     public function index(Request $request)
     {
-        // Memeriksa apakah dalam query request terdapat parameter tourism_sites.
-        if ($request->tourism_sites) {
-            // Membersihkan input yang diperoleh dari user.
-            $input = strip_tags($request->tourism_sites);
+        $data['orders'] = Order::where('user_id', Auth::user()->id)->get();
 
-            $tourism_site = TourismSite::find($input);
-
-            if (is_null($tourism_site)) {
-                echo "Paket wisata tidak ditemukan.";
-                return;
-            }
-
-            return view('pages.order.index', [ 'tourism_site' => $tourism_site ]);
-        }
+        return view('pages.order.index', $data); // melempar data ke view
     }
 
     /**

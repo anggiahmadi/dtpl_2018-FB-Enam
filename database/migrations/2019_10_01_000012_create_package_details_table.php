@@ -20,6 +20,9 @@ class CreatePackageDetailsTable extends Migration
             $table->unsignedBigInteger('lodgement_type_id')->nullable();
             $table->unsignedBigInteger('vehicle_id')->nullable();
             $table->unsignedBigInteger('service_provider_id')->nullable();
+            $table->integer('qty')->default(1); // in days
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->timestamps();
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('tourism_site_id')->references('id')->on('tourism_sites')->onDelete('cascade')->onUpdate('cascade');

@@ -144,44 +144,47 @@ DTPL Kelompok 6
             </div>
         </div>
         <div class="row offers_items">
-        @foreach($tourism_sites as $no => $tourism_site)
-            <!-- Offers Item -->
-            <div class="col-lg-6 offers_col">
-                <div class="offers_item">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="offers_image_container">
-                                <!-- Image by https://unsplash.com/@kensuarez -->
-                                <div class="offers_image_background" style="background-image:url({{ asset($tourism_site->default_picture) }})"></div>
-                                <div class="offer_name"><a href="{{ url('tourism_site/'.$tourism_site->id) }}">{{ $tourism_site->name }}</a></div>
+            @foreach($tourism_sites as $no => $tourism_site)
+                <!-- Offers Item -->
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <!-- Image by https://unsplash.com/@kensuarez -->
+                                    <div class="offers_image_background" style="background-image:url({{ asset($tourism_site->default_picture) }})"></div>
+                                    <div class="offer_name"><a href="{{ url('tourism_site/'.$tourism_site->id) }}">{{ $tourism_site->name }}</a></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="offers_content">
-                                <div class="offers_price">Rp {{ number_format($tourism_site->price, 0, ',', '.') }}</div>
-                                <div class="rating_r rating_r_4 offers_rating">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <div class="offers_price">Rp {{ number_format($tourism_site->price, 0, ',', '.') }}</div>
+                                    <div class="rating_r rating_r_4 offers_rating">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <p class="offers_text">{{ $tourism_site->desc }}</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
+                                            <li class="offers_icons_item"><img src="{{ asset('images/compass.png') }}" alt=""></li>
+                                            <li class="offers_icons_item"><img src="{{ asset('images/bicycle.png') }}" alt=""></li>
+                                            <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('tourism_site/'.$tourism_site->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url("order?tourism_sites=$tourism_site->id") }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
                                 </div>
-                                <p class="offers_text">{{ $tourism_site->desc }}</p>
-                                <div class="offers_icons">
-                                    <ul class="offers_icons_list">
-                                        <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/compass.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/bicycle.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
-                                    </ul>
-                                </div>
-                                <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('tourism_site/'.$tourism_site->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url("order?tourism_sites=$tourism_site->id") }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
+        <div class="row">
+            {{ $tourism_sites->links() }}
         </div>
     </div>
 </div>

@@ -25,5 +25,11 @@ Route::resource('contact', 'ContactController');
 Route::resource('visitor', 'VisitorController');
 Route::resource('order', 'OrderController');
 
+Route::get('lodgement/get_by_id/{id}', 'LodgementController@get_by_id');
+Route::get('lodgement_type/get_by_id/{id}', 'LodgementController@get_type_by_id');
+Route::get('tourism_site/get_by_id/{id}', 'TourismSiteController@get_by_id');
+Route::get('vehicle/get_by_id/{id}', 'VehicleController@get_by_id');
+Route::get('service_provider/get_by_id/{id}', 'ServiceProviderController@get_by_id');
+
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');

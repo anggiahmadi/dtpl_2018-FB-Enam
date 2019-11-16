@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/offers_responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_responsive.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     @yield('css')
 </head>
 
@@ -42,8 +43,9 @@
                                     @endif
                                 @else
                                     <!-- $users as $user -->
-                                    <div class="user_box_login user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
-                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('order') }}">{{ __('Persanan Ku') }}</a></div>
+                                    <div class="user_box_register user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
 
                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -260,8 +262,27 @@
             s1.setAttribute('crossorigin','*');
             s0.parentNode.insertBefore(s1,s0);
         })();
+
+        var total_request = 0;
+
+        function submitForm(formId){
+            if(total_request > 0)
+            {
+                alert("you already make a request");
+            }
+            else
+            {
+                total_request++;
+                document.getElementById(formId).submit();
+            }
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
     </script>
     <!--End of Tawk.to Script-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
     @yield('js')
 </body>
 
