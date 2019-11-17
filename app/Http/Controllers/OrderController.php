@@ -34,7 +34,7 @@ class OrderController extends Controller
      */
     public function index(Request $request)
     {
-        $data['orders'] = Order::where('user_id', Auth::user()->id)->get();
+        $data['orders'] = Order::where('user_id', Auth::user()->id)->where('status', '!=', 'CA')->orderBy('id', 'desc')->get();
 
         return view('pages.order.index', $data); // melempar data ke view
     }
@@ -92,6 +92,7 @@ class OrderController extends Controller
                 $order->length_of_term = $request['cp_length_of_term'];
                 $order->start_date = date('Y-m-d', strtotime($request['cp_start_date']));
                 $order->end_date = date('Y-m-d', strtotime($request['cp_end_date']));
+                $order->total_price = $request['total_price'];
                 if($order->save()){
                     for($i=0; $i < sizeof($request['item_id']); $i++){
                         $package_detail = new PackageDetail;
@@ -127,10 +128,8 @@ class OrderController extends Controller
                         $order_detail->save();
                     }
 
-                    \Session::flash('success', 'You are success in inputing your data');
+                    \Session::flash('success', 'Selamat order anda berhasi dibuat');
                     DB::commit();
-
-                    return Redirect::to($this->url);
                 }else{
                     \Session::flash('error', 'Maaf order anda gagal dibuat !!!');
                     DB::rollBack();
@@ -140,8 +139,55 @@ class OrderController extends Controller
                 DB::rollBack();
             }
         }else{
-            dd($request);
+            $order = new Order;
+            $order->user_id = Auth::user()->id;
+            $order->code = HomeController::getCode('orders', 'PO-');
+            $order->length_of_term = $request['length_of_term'];
+            $order->start_date = date('Y-m-d', strtotime($request['start_date']));
+            $order->end_date = date('Y-m-d', strtotime($request['end_date']));
+            
+            switch($request['order_source_from']){
+                case "package" :
+                    $order->package_id = $request['order_source_id'];
+                    $package = Package::findOrFail($request['order_source_id']);
+                    $order->total_price = $package->price;
+                break;
+
+                case "tourism_site" :
+                    $order->tourism_site_id = $request['order_source_id'];
+                    $tourism_site = TourismSite::findOrFail($request['order_source_id']);
+                    $order->total_price = $tourism_site->price;
+                break;
+
+                case "lodgement_type" :
+                    $order->lodgement_type_id = $request['order_source_id'];
+                    $lodgement_type = LodgementType::findOrFail($request['order_source_id']);
+                    $order->total_price = $lodgement_type->price;
+                break;
+
+                case "vehicle" :
+                    $order->vehicle_id = $request['order_source_id'];
+                    $vehicle = Vehicle::findOrFail($request['order_source_id']);
+                    $order->total_price = $vehicle->price;
+                break;
+
+                case "service_provider" :
+                    $order->service_provider_id = $request['order_source_id'];
+                    $service_provider = ServiceProvider::findOrFail($request['order_source_id']);
+                    $order->total_price = $service_provider->price;
+                break;
+            }
+
+            if($order->save()){
+                \Session::flash('success', 'Selamat order anda berhasi dibuat');
+                DB::commit();
+            }else{
+                \Session::flash('error', 'Maaf order anda gagal dibuat !!!');
+                DB::rollBack();
+            }
         }
+
+        return Redirect::to($this->url);
     }
 
     /**

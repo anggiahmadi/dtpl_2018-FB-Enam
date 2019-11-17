@@ -26,6 +26,8 @@ Route::resource('about', 'AboutController');
 Route::resource('contact', 'ContactController');
 Route::resource('visitor', 'VisitorController');
 Route::resource('order', 'OrderController');
+Route::resource('payment', 'PaymentController');
+Route::resource('review', 'ReviewController');
 
 Route::get('lodgement/get_by_id/{id}', 'LodgementController@get_by_id');
 Route::get('lodgement_type/get_by_id/{id}', 'LodgementController@get_type_by_id');
