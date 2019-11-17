@@ -44,7 +44,7 @@ DTPL Kelompok 6
 									<div class="hotel_location">{{ $tourism_site->location }}</div>
 								</div>
 								<div class="hotel_title_button ml-lg-auto text-lg-right">
-									<div class="button book_button trans_200"><a href="{{ url('order') }}">book<span></span><span></span><span></span></a></div>
+									<div class="button book_button trans_200"><a href="#" onclick="createOrder('{{ $tourism_site->id }}', 'tourism_site')">book<span></span><span></span><span></span></a></div>
 									<!-- <div class="hotel_map_link_container">
 										<div class="hotel_map_link">See Location on Map</div>
 									</div> -->

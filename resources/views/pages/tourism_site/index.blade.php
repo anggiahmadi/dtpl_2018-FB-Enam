@@ -175,7 +175,7 @@ DTPL Kelompok 6
                                             <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
                                         </ul>
                                     </div>
-                                    <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('tourism_site/'.$tourism_site->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url("order?tourism_sites=$tourism_site->id") }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
+                                    <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('tourism_site/'.$tourism_site->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="#" onclick="createOrder('{{ $tourism_site->id }}', 'tourism_site')"> <i class="fa fa-shopping-cart"></i> order now</a></div>
                                 </div>
                             </div>
                         </div>

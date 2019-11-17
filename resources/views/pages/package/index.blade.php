@@ -170,7 +170,7 @@ DTPL Kelompok 6
                                             <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
                                         </ul>
                                     </div>
-                                    <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('package/'.$package->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url('order') }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
+                                    <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('package/'.$package->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="#" onclick="createOrder('{{ $package->id }}', 'package')"> <i class="fa fa-shopping-cart"></i> order now</a></div>
                                 </div>
                             </div>
                         </div>
@@ -191,4 +191,9 @@ DTPL Kelompok 6
         </div>
     @endif
 </div>
+@endsection
+
+@section('js')
+<script>
+</script>
 @endsection
