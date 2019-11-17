@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    // Nama tabel
-    protected $table = 'orders';
+    public function order_detail(){
+        return $this->hasMany('App\Models\OrderDetail');
+    }
 }

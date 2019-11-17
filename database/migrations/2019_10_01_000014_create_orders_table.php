@@ -22,11 +22,10 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('vehicle_id')->nullable();
             $table->unsignedBigInteger('service_provider_id')->nullable();
             $table->string('code')->unique();
-            $table->integer('length_of_term')->default(1); // if select packages then will input same as package and not calculate to total price
-            $table->integer('quantity')->default(1);
+            $table->integer('length_of_term')->default(1);
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->double('detail_price')->default(0);
+            $table->double('total_price')->default(0);
             $table->enum('status', ['NP', 'PA', 'CA']);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

@@ -23,6 +23,36 @@ DTPL Kelompok 6
             <div class="col-lg-12">
                 <!-- Offers Grid -->
                 <div class="offers_grid">
+                    @if(Session::has('success'))
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Success - </b> {{ Session::get('success') }}
+                            </span>
+                        </div>
+                    @endif
+                    @if(Session::has('warning'))
+                        <div class="alert alert-warning">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Warning - </b> {{ Session::get('warning') }}
+                            </span>
+                        </div>
+                    @endif
+                    @if(Session::has('error'))
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Error - </b> {{ Session::get('error') }}
+                            </span>
+                        </div>
+                    @endif
                     <!-- Offers Item -->
                     @foreach($orders as $no => $order)
                         <div class="offers_item">

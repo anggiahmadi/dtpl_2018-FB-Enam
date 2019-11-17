@@ -38,24 +38,6 @@ class PackageController extends Controller
 
     public function create()
     {
-        $location = \Request::get('location');
-        $vehicles = null;
-        $service_providers = null;
-        $tourism_sites = null;
-        $lodgements = null;
-
-        if(!empty($location)){
-            $vehicles = Vehicle::where('location', 'like', '%'.$location.'%')->get();
-            $service_providers = ServiceProvider::where('location', 'like', '%'.$location.'%')->get();
-            $tourism_sites = TourismSite::where('location', 'like', '%'.$location.'%')->get();
-            $lodgements = Lodgement::where('location', 'like', '%'.$location.'%')->get();
-        }
-
-        $data['vehicles'] = $vehicles;
-        $data['service_providers'] = $service_providers;
-        $data['tourism_sites'] = $tourism_sites;
-        $data['lodgements'] = $lodgements;
-
-        return view('pages.package.create', $data); // melempar data ke view
+        // do nothing
     }
 }

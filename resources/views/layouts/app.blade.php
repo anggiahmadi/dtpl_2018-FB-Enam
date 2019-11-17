@@ -129,7 +129,6 @@
                 </ul>
             </div>
         </div>
-
         @yield('content')
 
         <!-- Footer -->

@@ -134,7 +134,7 @@ DTPL Kelompok 6
         <div class="row">
             <div class="col text-center">
                 <h2 class="section_title">
-                    <a href="{{ url('package/create') }}" class="btn btn-block btn-info">Create Your Own Tour Package</a>
+                    <a href="{{ url('order/create') }}" class="btn btn-block btn-info">Create Your Own Tour Package</a>
                 </h2>
             </div>
         </div>
