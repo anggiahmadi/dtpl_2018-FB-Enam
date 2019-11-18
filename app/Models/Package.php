@@ -9,4 +9,8 @@ class Package extends Model
     public function photo(){
         return $this->hasMany('App\Models\Photo');
     }
+
+    public function package_detail(){
+        return $this->hasMany('App\Models\PackageDetail');
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackageDetailsTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CreatePackageDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('package_details', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('package_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('package_id')->nullable();
             $table->unsignedBigInteger('tourism_site_id')->nullable();
             $table->unsignedBigInteger('lodgement_type_id')->nullable();
             $table->unsignedBigInteger('vehicle_id')->nullable();
             $table->unsignedBigInteger('service_provider_id')->nullable();
-            $table->integer('qty')->default(1); // in days
+            $table->integer('rating')->default(1);
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('tourism_site_id')->references('id')->on('tourism_sites')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('lodgement_type_id')->references('id')->on('lodgement_types')->onDelete('cascade')->onUpdate('cascade');
@@ -37,6 +39,6 @@ class CreatePackageDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('package_details');
+        Schema::dropIfExists('reviews');
     }
 }

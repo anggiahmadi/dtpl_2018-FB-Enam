@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PackageDetail extends Model
 {
-    //
+    public function package(){
+        return $this->belongsTo('App\Models\Package');
+    }
 }

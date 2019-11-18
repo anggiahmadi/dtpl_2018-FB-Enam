@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/offers_responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_responsive.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     @yield('css')
 </head>
 
@@ -42,8 +43,9 @@
                                     @endif
                                 @else
                                     <!-- $users as $user -->
-                                    <div class="user_box_login user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
-                                    <div class="user_box_register user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('order') }}">{{ __('Persanan Ku') }}</a></div>
+                                    <div class="user_box_register user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
 
                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -127,9 +129,44 @@
                 </ul>
             </div>
         </div>
-
         @yield('content')
 
+        <div class="modal fade modal-mini modal-primary" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-small">
+                <div class="modal-content">
+                    <form method="POST" action="{{ url('order') }}" id="normal_order">
+                        @csrf
+                        <div class="modal-header">
+                            <h3>Order Info</h3> <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="col-md-12 col-lg-12">
+                                <input type="hidden" name="order_source_id" id="order_source_id">
+                                <input type="hidden" name="order_source_from" id="order_source_from">
+                                <div class="row">
+                                    <label class="control-label">Start Date</label>
+                                    <input type="date" class="form-control" name="start_date" id="start_date" value="{{ date('Y-m-d') }}" onchange="globalPeriodeChanged('start_date')" required>
+                                </div>
+                                <div class="row">
+                                    <label class="control-label">Length Of Term</label>
+                                    <input type="number" class="form-control" name="length_of_term" id="length_of_term" value="1" onchange="globalPeriodeChanged('length_of_term')" required>
+                                </div>
+                                <div class="row">
+                                    <label class="control-label">End Date</label>
+                                    <input type="date" class="form-control" name="end_date" id="end_date" value="{{ date('Y-m-d') }}" onchange="globalPeriodeChanged('end_date')" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-warning text-white" data-dismiss="modal">Never mind</button>
+                            <button type="submit" class="btn btn-success text-white">Yes
+                                <div class="ripple-container"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- Footer -->
 
         <footer class="footer">
@@ -260,8 +297,51 @@
             s1.setAttribute('crossorigin','*');
             s0.parentNode.insertBefore(s1,s0);
         })();
+
+        var total_request = 0;
+
+        function submitForm(formId){
+            if(total_request > 0)
+            {
+                alert("you already make a request");
+            }
+            else
+            {
+                total_request++;
+                document.getElementById(formId).submit();
+            }
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+
+        function createOrder(id, order_source_from){
+            document.getElementById("order_source_id").value = id;
+            document.getElementById("order_source_from").value = order_source_from;
+            $("#orderModal").modal();
+        }
+
+        function globalPeriodeChanged(driven_by){
+            var start_date = document.getElementById("start_date").value;
+            var length_of_term = document.getElementById("length_of_term").value;
+            var end_date = document.getElementById("end_date").value;
+
+            var link = "{{ url('setup_periode') }}";
+            var url = link+"?driven_by="+driven_by+"&start_date="+start_date+"&length_of_term="+length_of_term+"&end_date="+end_date;
+
+            $.get(url, function (data){
+                if(data['message'] == 'complete'){
+                    document.getElementById("start_date").value = data['start_date'];
+                    document.getElementById("length_of_term").value = data['length_of_term'];
+                    document.getElementById("end_date").value = data['end_date'];
+                }
+            });
+        }
     </script>
     <!--End of Tawk.to Script-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
     @yield('js')
 </body>
 

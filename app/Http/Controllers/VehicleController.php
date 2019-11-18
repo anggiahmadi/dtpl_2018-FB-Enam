@@ -9,6 +9,12 @@ use App\Models\ServiceProviderType;
 
 class VehicleController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    
     public function index()
     {
         $data['categories'] = Category::get();
@@ -17,9 +23,9 @@ class VehicleController extends Controller
         $location = \Request::get('location');
 
         if(!empty($location)){
-            $data['vehicles'] = Vehicle::where('location', 'like', '%'.$location.'%')->get(); // mengambil semua data vehicle
+            $data['vehicles'] = Vehicle::where('location', 'like', '%'.$location.'%')->paginate(6); // mengambil semua data vehicle
         }else{
-            $data['vehicles'] = Vehicle::get(); // mengambil semua data vehicle
+            $data['vehicles'] = Vehicle::paginate(6); // mengambil semua data vehicle
         }
 
         return view('pages.vehicle.index', $data); // melempar data ke view
@@ -30,5 +36,9 @@ class VehicleController extends Controller
         $data['vehicle'] = Vehicle::findOrFail($id);
 
         return view('pages.vehicle.detail', $data); // melempar data ke view
+    }
+
+    public function get_by_id($id){
+        return Vehicle::findOrFail($id);
     }
 }

@@ -167,7 +167,7 @@ DTPL Kelompok 6
 									</div>
 									<div class="col-lg-3 text-lg-right">
 										<div class="room_button">
-											<div class="button book_button trans_200"><a href="{{ url('order') }}">book<span></span><span></span><span></span></a></div>
+											<div class="button book_button trans_200"><a href="#" onclick="createOrder('{{ $lodgement_type->id }}', 'lodgement_type')">book<span></span><span></span><span></span></a></div>
 										</div>
 									</div>
 								</div>	
