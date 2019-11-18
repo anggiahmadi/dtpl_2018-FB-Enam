@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LodgementController;
 use App\Models\Category;
 use App\Models\ServiceProviderType;
 use App\Models\Package;
+use App\Models\Lodgement;
+use App\Models\LodgementType;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -35,6 +38,21 @@ class HomeController extends Controller
 
         $data['categories'] = Category::get();
         $data['service_provider_types'] = ServiceProviderType::get();
+
+        // $data['categories'] = Category::get();
+        // $data['service_provider_types'] = ServiceProviderType::get();
+        
+        $location = \Request::get('location');
+
+        if(!empty($location)){
+            $data['lodgements'] = Lodgement::where('lodgements.location', 'like', '%'.$location.'%')
+                                            ->orWhere('lodgements.name', 'like', '%'.$location.'%')
+                                            ->get(); // mengambil semua data package
+            //$data['lodgements'] = Lodgement::join('lodgement_types', 'lodgements.id', '=', 'lodgement_types.lodgement_id')->where('lodgements.location', 'like', '%'.$location.'%')->get(); // mengambil semua data package
+        }else{
+            $data['lodgements'] = Lodgement::get(); // mengambil semua data package
+            //$data['lodgements'] = Lodgement::join('lodgement_types', 'lodgements.id', '=', 'lodgement_types.lodgement_id')->get(); // mengambil semua data package
+        }
         
         return view('pages.home.index', $data);
     }
@@ -138,4 +156,6 @@ class HomeController extends Controller
 
         return $number_format;
     }
+
+
 }

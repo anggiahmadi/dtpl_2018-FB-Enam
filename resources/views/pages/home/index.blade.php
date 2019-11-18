@@ -240,7 +240,7 @@ DTPL Kelompok 6
                         <div class="button intro_button"><div class="button_bcg"></div>
                         <a href="{{ url('package') }}">see more<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
-                            {{-- <h1>Pantai Kenjeran Surabay</h1> --}}
+                            {{-- <h1>Pantai Kenjeran Surabaya</h1> --}}
                             <div class="intro_price">Rp 15K</div>
                             <div class="rating rating_4">
                                 <i class="fa fa-star"></i>
@@ -421,11 +421,11 @@ DTPL Kelompok 6
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="section_title">the best offers with rooms</h2>
+                <h2 class="section_title">Tawaran Hotel Favorit</h2>
             </div>
         </div>
         <div class="row offers_items">
-
+        @foreach($lodgements as $no => $lodgement)
             <!-- Offers Item -->
             <div class="col-lg-6 offers_col">
                 <div class="offers_item">
@@ -433,13 +433,21 @@ DTPL Kelompok 6
                         <div class="col-lg-6">
                             <div class="offers_image_container">
                                 <!-- Image by https://unsplash.com/@kensuarez -->
-                                <div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
-                                <div class="offer_name"><a href="#">grand castle</a></div>
+                                <div class="offers_image_background" style="background-image:url({{ asset($lodgement->default_picture) }})"></div>
+                                <div class="offer_name"><a href="{{ url('lodgement/'.$lodgement->id) }}">{{ $lodgement->name }}</a></div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="offers_content">
-                                <div class="offers_price">$70<span>per night</span></div>
+                                <div class="offers_price">
+                                    @foreach($lodgement->lodgement_type as $lodgement_type)
+                                        Rp {{ number_format($lodgement_type->price, 0, ',', '.') }}
+                                        
+                                        @php
+                                            break;
+                                        @endphp
+                                    @endforeach
+                                </div>
                                 <div class="rating_r rating_r_4 offers_rating">
                                     <i></i>
                                     <i></i>
@@ -447,7 +455,7 @@ DTPL Kelompok 6
                                     <i></i>
                                     <i></i>
                                 </div>
-                                <p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+                                <p class="offers_text">{{ $lodgement->desc }}</p>
                                 <div class="offers_icons">
                                     <ul class="offers_icons_list">
                                         <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
@@ -456,233 +464,13 @@ DTPL Kelompok 6
                                         <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
                                     </ul>
                                 </div>
-                                <div class="offers_link"><a href="offers.html">read more</a></div>
+                                <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('lodgement/'.$lodgement->id) }}">read more</a> &nbsp;&nbsp;&nbsp;</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Offers Item -->
-            <div class="col-lg-6 offers_col">
-                <div class="offers_item">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="offers_image_container">
-                                <!-- Image by Egzon Bytyqi -->
-                                <div class="offers_image_background" style="background-image:url(images/offer_2.jpg)"></div>
-                                <div class="offer_name"><a href="#">turkey hills</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="offers_content">
-                                <div class="offers_price">$50<span>per night</span></div>
-                                <div class="rating_r rating_r_4 offers_rating">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-                                <p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
-                                <div class="offers_icons">
-                                    <ul class="offers_icons_list">
-                                        <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/compass.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/bicycle.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
-                                    </ul>
-                                </div>
-                                <div class="offers_link"><a href="offers.html">read more</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Offers Item -->
-            <div class="col-lg-6 offers_col">
-                <div class="offers_item">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="offers_image_container">
-                                <!-- Image by https://unsplash.com/@nevenkrcmarek -->
-                                <div class="offers_image_background" style="background-image:url(images/offer_3.jpg)"></div>
-                                <div class="offer_name"><a href="#">island dream</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="offers_content">
-                                <div class="offers_price">$90<span>per night</span></div>
-                                <div class="rating_r rating_r_4 offers_rating">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-                                <p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
-                                <div class="offers_icons">
-                                    <ul class="offers_icons_list">
-                                        <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/compass.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/bicycle.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
-                                    </ul>
-                                </div>
-                                <div class="offers_link"><a href="offers.html">read more</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Offers Item -->
-            <div class="col-lg-6 offers_col">
-                <div class="offers_item">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="offers_image_container">
-                                <!-- Image by https://unsplash.com/@mantashesthaven -->
-                                <div class="offers_image_background" style="background-image:url(images/offer_4.jpg)"></div>
-                                <div class="offer_name"><a href="#">travel light</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="offers_content">
-                                <div class="offers_price">$30<span>per night</span></div>
-                                <div class="rating_r rating_r_4 offers_rating">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-                                <p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
-                                <div class="offers_icons">
-                                    <ul class="offers_icons_list">
-                                        <li class="offers_icons_item"><img src="{{ asset('images/post.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/compass.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/bicycle.png') }}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
-                                    </ul>
-                                </div>
-                                <div class="offers_link"><a href="offers.html">read more</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="trending">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="section_title">trending now</h2>
-            </div>
-        </div>
-        <div class="row trending_container">
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_1.png') }}" alt="https://unsplash.com/@fransaraco"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">grand hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_2.png') }}" alt="https://unsplash.com/@grovemade"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_3.png') }}" alt="https://unsplash.com/@jbriscoe"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">queen hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_4.png') }}" alt="https://unsplash.com/@oowgnuj"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_5.png') }}" alt="https://unsplash.com/@mindaugas"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">grand hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_6.png') }}" alt="https://unsplash.com/@itsnwa"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_7.png') }}" alt="https://unsplash.com/@rktkn"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">queen hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending Item -->
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{ asset('images/trend_8.png') }}" alt="https://unsplash.com/@thoughtcatalog"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
+        @endforeach
         </div>
     </div>
 </div>
@@ -699,7 +487,7 @@ DTPL Kelompok 6
             </div>
             <div class="col-lg-7">
                 <div class="contact_form_container">
-                    <div class="contact_title">get in touch</div>
+                    <div class="contact_title">Yuk, kontak kita</div>
                     <form action="#" id="contact_form" class="contact_form">
                         <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
                         <input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
