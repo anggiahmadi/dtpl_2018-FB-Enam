@@ -30,6 +30,10 @@ class OrderController extends Controller
 
             return view('pages.order.index', [ 'tourism_site' => $tourism_site ]);
         }
+        else if($request->packages)
+        {
+
+        }
     }
 
     /**

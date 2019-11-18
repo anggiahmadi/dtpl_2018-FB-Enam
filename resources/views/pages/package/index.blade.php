@@ -8,7 +8,7 @@ DTPL Kelompok 6
 <div class="home">
     <div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/bromolandscape.jpg') }}"></div>
     <div class="home_content">
-        <div class="home_title">Paket Wisata</div>
+        <!-- <div class="home_title">Paket Wisata</div> -->
     </div>
 </div>
 
@@ -133,7 +133,7 @@ DTPL Kelompok 6
     <div class="container">
     <div class="row">
             <div class="col text-center">
-                <h2 class="section_title"></h2>
+                <h2 class="section_title">Paket Wisata</h2>
             </div>
         </div>
         <div class="row offers_items">
@@ -168,7 +168,7 @@ DTPL Kelompok 6
                                         <li class="offers_icons_item"><img src="{{ asset('images/sailboat.png') }}" alt=""></li>
                                     </ul>
                                 </div>
-                                <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('package/'.$package->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url('order') }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
+                                <div class="offers_link"><i class="fa fa-arrow-right"></i> <a href="{{ url('package/'.$package->id) }}">read more</a> &nbsp;&nbsp;&nbsp; <a href="{{ url('tourism_site/'.$tourism_site->id) }}"> <i class="fa fa-shopping-cart"></i> order now</a></div>
                             </div>
                         </div>
                     </div>
