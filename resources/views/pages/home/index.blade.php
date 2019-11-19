@@ -5,7 +5,15 @@ DTPL Kelompok 6
 @endsection
 
 @section('content')
+
+<link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Ruge Boogie' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Princess Sofia' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Mansalva' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
 <!-- Home -->
+
 
 <div class="home">
 
@@ -211,13 +219,14 @@ DTPL Kelompok 6
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="intro_title text-center">Wisata Favorit</h2>
+                <h2 class="intro_title text-center" style="font-family: 'Atma';font-size: 50px;">Wisata Favorit</h2>
+                <!-- <p class="intro_title text-center" style="font-family: 'Atma';font-size: 22px;">Wisata Favorit</p> -->
             </div>
         </div>
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="intro_text text-center">
-                    <p style="font-family:Gill Sans; font-size:12pt; color:black;">
+                    <p style="font-family:Atma; font-size:16pt; color:black;">
                         Siapa bilang, tempat wisata keren hanya ada di Bali dan Lombok saja?
                         Pulau Jawa juga dipenuhi dengan tempat-tempat wisata yang gak kalah indahnya dan serunya, lho.
                         Sekarang, kamu tidak perlu jauh-jauh ke luar pulau, cukup berpetualang di dalam Pulau Jawa saja.

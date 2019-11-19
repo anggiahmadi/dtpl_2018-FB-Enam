@@ -19,6 +19,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/single_listing_responsive.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Ruge Boogie' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Princess Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mansalva' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
     @yield('css')
 </head>
 
@@ -44,7 +50,7 @@
                                 @else
                                     <!-- $users as $user -->
                                     <div class="user_box_login user_box_link"><a href="{{ url('visitor') }}">{{ Auth::user()->name }}</a></div>
-                                    <div class="user_box_login user_box_link"><a href="{{ url('order') }}">{{ __('Persanan Ku') }}</a></div>
+                                    <div class="user_box_login user_box_link"><a href="{{ url('order') }}">{{ __('Pesanan Ku') }}</a></div>
                                     <div class="user_box_register user_box_link"><a href="{{ url('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></div>
 
                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
@@ -64,7 +70,7 @@
                     <div class="row">
                         <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                             <div class="logo_container">
-                                <div class="logo"><a href="{{ url('') }}"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
+                                <div class="logo"><a href="{{ url('') }}" style="font-family: 'Atma';font-size: 50px;"><img src="{{ asset('images/logo.png') }}" alt="">PiknikYuk!</a></div>
                             </div>
                             <div class="main_nav_container ml-auto">
                                 <ul class="main_nav_list">

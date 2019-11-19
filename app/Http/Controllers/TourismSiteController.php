@@ -17,7 +17,21 @@ class TourismSiteController extends Controller
         $location = \Request::get('location');
         $category_id = \Request::get('category_id');
 
-        $data['tourism_sites'] = TourismSite::paginate(6); // mengambil semua data package
+        if(!empty($location) && !empty($category_id)){
+            $data['tourism_sites'] = TourismSite::join('t_s_and_c', 'tourism_sites.id', '=', 't_s_and_c.tourism_site_id')
+                                        ->join('categories', 't_s_and_c.category_id', '=', 'categories.id')
+                                        ->select('tourism_sites.*', 'categories.*')
+                                        ->where('location', 'like', '%'.$location.'%')
+                                        ->where('t_s_and_c.category_id', $category_id)
+                                        ->paginate(6); // mengambil semua data tourism site
+        }else{
+            $data['tourism_sites'] = TourismSite::paginate(6); // mengambil semua data service_provider
+
+        }
+
+        // var_dump($data['tourism_sites']);
+        // die();
+
 
         return view('pages.tourism_site.index', $data); // melempar data ke view
     }

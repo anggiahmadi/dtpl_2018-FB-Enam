@@ -231,13 +231,94 @@ class InitialSeeder extends Seeder
 
         /* INSERT DATA TO TOURISM_SITES AND CATEGORIES TABLE */
         DB::table('t_s_and_c')->insert([
+            'category_id' => 1, 'tourism_site_id' => '1'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 2, 'tourism_site_id' => '1'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 3, 'tourism_site_id' => '1'
+        ]);
+        DB::table('t_s_and_c')->insert([
             'category_id' => 4, 'tourism_site_id' => '1'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 5, 'tourism_site_id' => '1'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 1, 'tourism_site_id' => '2'
         ]);
         DB::table('t_s_and_c')->insert([
             'category_id' => 2, 'tourism_site_id' => '2'
         ]);
         DB::table('t_s_and_c')->insert([
+            'category_id' => 3, 'tourism_site_id' => '2'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 4, 'tourism_site_id' => '2'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 5, 'tourism_site_id' => '2'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 1, 'tourism_site_id' => '3'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 2, 'tourism_site_id' => '3'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 3, 'tourism_site_id' => '3'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 4, 'tourism_site_id' => '3'
+        ]);
+        DB::table('t_s_and_c')->insert([
             'category_id' => 5, 'tourism_site_id' => '3'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 1, 'tourism_site_id' => '4'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 2, 'tourism_site_id' => '4'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 3, 'tourism_site_id' => '4'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 4, 'tourism_site_id' => '4'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 5, 'tourism_site_id' => '4'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 1, 'tourism_site_id' => '5'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 2, 'tourism_site_id' => '5'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 3, 'tourism_site_id' => '5'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 4, 'tourism_site_id' => '5'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 5, 'tourism_site_id' => '5'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 1, 'tourism_site_id' => '6'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 2, 'tourism_site_id' => '6'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 3, 'tourism_site_id' => '6'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 4, 'tourism_site_id' => '6'
+        ]);
+        DB::table('t_s_and_c')->insert([
+            'category_id' => 5, 'tourism_site_id' => '6'
         ]);
 
         /* DELETE DATA TO TOURISM_SITES TABLE */
